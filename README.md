@@ -27,4 +27,4 @@ Clone the repository to your local machine. Open the project directory index.htm
 
 # Autors
 - **[@Materdelo](https://github.com/Materdelo)**
-- **[@Makaronikid](https://github.com/Makaronikid)**
+- **[@DavidSonko](https://github.com/DavidSonko)**
