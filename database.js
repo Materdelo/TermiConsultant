@@ -374,14 +374,14 @@ const table_linux = [
     {command: "diff", description: "Pokazuje wieszer które różnią się między dwoma plikami", category: ""},
     {command: "adduser", description: "Dodaje użytkownika", category: ""},
     {command: "users", description: "Pokazuje aktualnie zalogowanych urzytkowników", category: ""},
-    {command: "clear", description: "Czyści ekran (odpowiednik naciśnięcia [Ctrl-L] w powłoce Bash)", category: "terminal", example: "clear", options: [
+    {command: "clear", description: "Czyści ekran (odpowiednik naciśnięcia [Ctrl-L] w powłoce Bash)", category: "terminal", example: "clear", option: [
         {argument: "-x", description: "Czyści ekran, ale zachowaj bufor przewijania terminala"},
         {argument: "-T [type_of_terminal]", description: ""},
     ]},
-    {command: "sudo", description: "Uruchamia polecenie jako super urzytkownik (root)", category: "terminal", example: "sudo ls",  options: [
+    {command: "sudo", description: "Uruchamia polecenie jako super urzytkownik (root)", category: "terminal", example: "sudo ls",  option: [
         {argument:"-u", description: "Uruchamia polecenie jako inny urzytkownik"},
     ]},
-    {command: "ls", description: "Listuje katalogi", category: "catalogs", example: "ls", options: [
+    {command: "ls", description: "Listuje katalogi", category: "catalogs", example: "ls", option: [
         {argument:"-l", description: "Listuje z datami"},
         {argument:"-la", description: "Coś innego robi"},
     ]},
@@ -399,7 +399,7 @@ const table_linux = [
 const table_windows = [
     {command: "cls", description: "czyści ekran", category: "terminal"},
     {command: "sudo", description: "Daje zmienia uprawnienia na administratora", category: "terminal"},
-    {command: "ls", description: "Listuje katalogi", category: "catalogs", options: [
+    {command: "ls", description: "Listuje katalogi", category: "catalogs", option: [
         {argument:"-l", description: "Listuje z datami"},
         {argument:"-la", description: "Coś innego robi"},
     ]}
@@ -467,8 +467,8 @@ function index_to_category(index, OS){
 
 function index_to_arguments(index, OS){
     let text = "";
-    let has_options = table_linux[index].hasOwnProperty('option')
-    if(has_options){
+    let has_option = table_linux[index].hasOwnProperty('option')
+    if(has_option){
         if(OS == "Linux"){
             for (let i = 0; i < table_linux[index].option.length; i++) {
                 text += table_linux[index].option[i].argument + "|"
@@ -485,8 +485,8 @@ function index_to_arguments(index, OS){
 
 function index_to_arguments_description(index, OS){
     let text = "";
-    let has_options = table_linux[index].hasOwnProperty('option')
-    if(has_options){
+    let has_option = table_linux[index].hasOwnProperty('option')
+    if(has_option){
         if(OS == "Linux"){
             for (let i = 0; i < table_linux[index].option.length; i++) {
                 text += table_linux[index].option[i].description + "|"

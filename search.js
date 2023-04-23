@@ -49,8 +49,8 @@ function rest(input){
 
     if(count == 0){
         gen.innerHTML = '<p>' + input + " - " + index_to_description(command_to_index(input, system), system) + '</p>';
-        let option = index_to_option(command_to_index(input, system), system);
-        let option_description = index_to_option_description(command_to_index(input, system), system);
+        let option = index_to_arguments(command_to_index(input, system), system);
+        let option_description = index_to_arguments_description(command_to_index(input, system), system);
         if(option != undefined){
             option_e = option.split('|');
             option_description_e = option_description.split('|');  
