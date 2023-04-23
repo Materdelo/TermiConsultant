@@ -516,14 +516,323 @@ const table_linux = [
 ]
 
 const table_windows = [
-    {command: "cls", description: "czyści ekran", category: "terminal"},
-    {command: "sudo", description: "Daje zmienia uprawnienia na administratora", category: "terminal"},
-    {command: "ls", description: "Listuje katalogi", category: "catalogs", option: [
-        {argument:"-l", description: "Listuje z datami"},
-        {argument:"-la", description: "Coś innego robi"},
-    ]}
+    {command: "assoc", description: "Służy do przypisywania lub wyświetlania skojarzeń rozszerzeń plików z programami, które obsługują te pliki", category: "system", example: "assoc .txt=txtfile", option: [
+        {argument: "/?", description: "Wyświetla pomoc dla komendy"},
+        {argument: ".extension", description: "Określa rozszerzenie nazwy pliku"},
+        {argument: ".extension = filetype", description: "Określa typ pliku do skojarzenia z określonym rozszerzeniem nazwy pliku"},
+    ]},
+    {command: "attrib", description: "Służy do wyświetla, ustawia lub usuwa atrybutów przypisanych do plików lub katalogów", category: "system", example: "attrib example.txt", option: [
+        {argument: "/?", description: "Wyświetla pomoc dla komendy"},
+        {argument: "+/-", description: "Ustawia '+' lub czyści '-' atrybut pliku"},
+        {argument: "r", description: "Atrybut pliku tylko do odczytu"},
+        {argument: "a", description: "Atrybut pliku archiwum"},
+        {argument: "s", description: "Atrybut pliku systemowego"},
+        {argument: "h", description: "Atrybut pliku ukrytego"},
+        {argument: "i", description: "Atrybut pliku bez indeksowania zawartości"},
+    ]},
+    {command: "break", description: "Służy do ustawiania lub czyśczenia rozszerzone sprawdzanie CTRL+C", category: "system", example: "break"},
+    {command: "bcdedit", description: "Umożliwia użytkownikowi wyświetlanie, modyfikowanie i usuwanie wpisów w bazie danych konfiguracji rozruchowej", category: "tools", example: "bcdedit", option: [
+        {argument: "/create", description: "Umożliwia utworzenie nowego wpisu w bazie danych konfiguracji rozruchowej"},
+        {argument: "/set", description: "Umożliwia modyfikację wartości wpisu w bazie danych konfiguracji rozruchowej"},
+        {argument: "/delete", description: "Umożliwia modyfikację wartości wpisu w bazie danych konfiguracji rozruchowej"},
+        {argument: "/enum", description: "Wyświetla wszystkie wpisy w bazie danych konfiguracji rozruchowej"},
+        {argument: "/default", description: "Określa identyfikator wpisu, który ma być użyty jako domyślny podczas rozruchu systemu"},
+        {argument: "/tiemout", description: "Określa czas oczekiwania w sekundach przed automatycznym uruchomieniem domyślnego wpisu"},
+        {argument: "/nx", description: "Określa ustawienia zabezpieczeń wykonania pamięci"},
+        {argument: "/safeboot", description: "Określa tryb uruchamiania systemu w przypadku awarii"},
+        {argument: "/device", description: "Określa urządzenie, które ma być użyte podczas uruchamiania systemu"},
+        {argument: "/debug", description: "Określa ustawienia debugowania systemu"},
+    ]},
+    {command: "cacls", description: "Służy do zarządzania uprawnieniami dostępu do plików i folderów", category: "tools", example: "cacls path\example.txt", option: [
+        {argument: "/t", description: "Stosuje zmiany na wszystkich plikach i folderach w danym katalogu i jego podkatalogach"},
+        {argument: "/e", description: "Zmienia uprawnienia, nie usuwając przy tym dotychczasowych ustawień"},
+        {argument: "/c", description: "Kontynuuje działanie polecenia, nawet gdy napotka błędy"},
+        {argument: "/g [user]:[permission]", description: "Nadaje podanemu użytkownikowi określone uprawnienia"},
+        {argument: "/r [user]", description: "usuwa podanego użytkownika z listy uprawnień"},
+        {argument: "/p [user]:[permission]", description: "Nadaje podanemu użytkownikowi określone uprawnienia, zachowując dotychczasowe uprawnienia"},
+        {argument: "/d [user]:[permission]", description: "Nadaje domyślne uprawnienia danemu użytkownikowi"},
+        {argument: "/s", description: "Stosuje zmiany do podkatalogów"},
+    ]},
+    {command: "call", description: "Służy do wywoływania jednego pliku wsadowego z innego pliku wsadowego lub z linii poleceń", category: "system", example: 'call "path/example.bat"', option: [
+        {argument: "/b", description: "Pozwala na przerwanie wykonywania bieżącego pliku wsadowego i wykonanie polecenia w pliku wsadowym wywołanym przez komendę"},
+        {argument: "/d", description: "Ustawia flagę związane z debagowaniem plików wsadowych"},
+        {argument: "/t", description: "Pozwala na przekazanie czasu oczekiwania w milisekundach na zakończenie wykonywania wywołanego pliku wsadowego"},
+        {argument: "/v", description: "Pozwala na włączenie rozszerzonego wyjścia"},
+        {argument: "/?", description: "Wyświetla pomoc dla komendy"},
+    ]},
+    {command: "cd", description: "Służy do zmiany bieżącego katalogu roboczego", category: "system", example: "cd Folder", option: [
+        {argument: "/d", description: "Pozwala na zmianę dysku oraz katalogu"},
+        {argument: "/?", description: "c"},
+        {argument: "./", description: "Odnoszą się do bieżącego katalogu"},
+        {argument: "../", description: "Pozwala na przejście do katalogu nadrzędnego"},
+    ]},
+    {command: "chcp", description: "Ssłuży do zmiany kodowania znaków używanego przez konsolę", category: "system", example: "chcp 1252", option: [
+        {argument: "/?", description: "Wyświetla pomoc dla komendy"},
+        {argument: "[code]", description: "Zmienia kodowanie konsoli na podane kodowanie. Domyślne jest kodowanie 1252"},
+    ]},
+    {command: "chdir", description: "Służy do zmiany bieżącego katalogu roboczego w wierszu poleceń", category: "system", example: "chdir"},
+    {command: "chkdsk", description: "Narzędzie służące do sprawdzania integralności systemu plików oraz wykrywania błędów na dysku twardym", category: "tools", example: "chkdsk C:", option: [
+        {argument: "/f", description: "Naprawia automatycznie znalezione błędy na dysku"},
+        {argument: "/r", description: "Znajduje uszkodzone sektory i przydziela im nowe miejsce"},
+        {argument: "/x", description: "Wwymusza wyłączenie dysku przed jego sprawdzeniem"},
+        {argument: "/v", description: "Wyświetla szczegółowe informacje o postępie procesu sprawdzania dysku"},
+        {argument: "/b", description: "Sprawdza sektory uruchomieniowe na dysku i naprawia ich błędy"},
+        {argument: "/scan", description: "Skanuje dysk, ale nie naprawia znalezionych błędów"},
+        {argument: "/spotfix", description: "Naprawia tylko wybrane błędy na dysku, bez skanowania całego dysku"},
+    ]},
+    {command: "chkntfs", description: "Służy do sprawdzania, czy wolumin wymaga sprawdzenia spójności przy uruchamianiu systemu", category: "tools", example: "chkntfs C:", option: [
+        {argument: "/c", description: "Wyłącza sprawdzanie dysku podczas uruchamiania systemu"},
+        {argument: "/x", description: "Wyłącza sprawdzanie określonego woluminu podczas następnego uruchomienia systemu"},
+        {argument: "/b", description: "Sprawdza tylko poprawność boot sektora"},
+        {argument: "/v", description: "Wyświetla nazwę woluminu na początku sprawdzania"},
+    ]},
+    {command: "cls", description: "Służy do czyszczenia ekranu konsoli, usuwając wszystkie wcześniej wyświetlone wiersze", category: "system", example: "cls"},
+    {command: "cmd", description: "Narzędzie, które pozwala na wykonywanie różnych zadań na komputerze za pomocą wiersza poleceń", category: "system", example: "cmd", option: [
+        {argument: "/c", description: "Pozwala na wykonanie polecenia i natychmiastowe zamknięcie wiersza poleceń"},
+        {argument: "/k", description: "Pozwala na wykonanie polecenia i pozostawienie otwartego wiersza poleceń"},
+        {argument: "/r", description: "Pozwala na wykonanie polecenia, a następnie zrestartowanie komputera"},
+        {argument: "/s", description: "Pozwala na wykonanie polecenia i zamknięcie komputera"},
+        {argument: "/t [time]", description: "Pozwala na ustawienie czasu oczekiwania w sekundach przed wykonaniem polecenia"},
+    ]},
+    {command: "color", description: "Służy do zmiany koloru tła i tekstu w oknie wiersza polecenia", category: "system", example: "color 1F", option: [
+        {argument: "0-9", description: "Cyfry określają kolory tła"},
+        {argument: "A-F", description: "Litery określają kolory tekstu"},
+        {argument: "/t", description: "Wyświetla informacje o bieżącym kolorze tekstu i tła"},
+        {argument: "/?", description: "Wyświetla pomoc dla komendy"},
+    ]},
+    {command: "comp", description: "Służy do porównywania zawartości dwóch plików lub katalogów", category: "tools", example: "comp path/example1.txt path/example2.txt", option: [
+        {argument: "/a", description: "Porównuje pliki jako pliki tekstowe ASCII"},
+        {argument: "/b", description: "Porównuje pliki jako pliki binarne"},
+        {argument: "/c", description: "Przerywa porównywanie po pierwszym znalezieniu różnicy"},
+        {argument: "/d", description: "Wyświetla różnice między plikami"},
+        {argument: "/l", description: "Porównuje pliki bez uwzględniania wielkości liter"},
+        {argument: "/n", description: "Porównuje pliki bez uwzględniania liczby linii"},
+        {argument: "/u", description: "Porównuje pliki, ale ignoruje różnice w końcach wierszy"},
+        {argument: "/w", description: "Porównuje pliki bez uwzględniania białych znaków"},
+    ]},
+    {command: "compact", description: "Służy do kompresowania plików i folderów w celu zaoszczędzenia miejsca na dysku", category: "tools", example: "compact /c path/folder", option: [
+        {argument: "/c", description: "Kompresuje plik lub katalog"},
+        {argument: "/u", description: "Rozpakowuje skompresowany plik lub folder"},
+        {argument: "/s", description: "Kompresuje pliki w podkatalogach"},
+        {argument: "/i", description: "Ignoruje pliki skompresowane wcześniej"},
+        {argument: "/f", description: "Wymusza kompresję plików tylko wtedy, gdy oszczędność miejsca wynosi co najmniej 5%"},
+        {argument: "/q", description: "Wyłącza wyświetlanie podsumowania"},
+        {argument: "/exe", description: "Kompresuje pliki wykonywalne (.exe) i biblioteki DLL"},
+    ]},
+    {command: "convert", description: "Służy do konwersji systemu plików na dyskach twardych lub innych urządzeniach pamięci", category: "system", example: "convert D:/FS:NFTS", option: [
+        {argument: "/FS:NFTS", description: "Umożliwia wybranie docelowego systemu plików. W tym przypadku NFTS"},
+        {argument: "/FS:FAT", description: "umożliwia wybranie docelowego systemu plików. W tym przypadku FAT"},
+        {argument: "/x", description: "Wymusza wyłączenie systemu plików na dysku przed rozpoczęciem konwersji"},
+        {argument: "/c", description: "Kompresuje pliki podczas konwersji"},
+        {argument: "/u", description: "Umożliwia anulowanie ostatniej operacji konwersji"},
+        {argument: "/debug", description: "Umożliwia wyświetlanie szczegółowych informacji o procesie konwersji"},
+    ]},
+    {command: "copy", description: "Służy do kopiowania plików z jednej lokalizacji do innej", category: "system", example: "copy C:/folder/example.txt D:/Folder", option: [
+        {argument: "/d", description: "Kopiuje tylko te pliki, które różnią się czasem modyfikacji lub rozmiarem w porównaniu z plikami docelowymi"},
+        {argument: "/y", description: "Nie pyta o potwierdzenie kopiowania, jeśli plik docelowy już istnieje i zostanie nadpisany"},
+        {argument: "/z", description: "Kpoiuje pliki w trybie odzyskiwana"},
+        {argument: "/a", description: "Kopiuje tylko te pliki, które mają ustawiony atrybut archiwum, a następnie zdejmuje ten atrybut z tych plików"},
+        {argument: "/v", description: "Weryfikuje każdy skopiowany plik za pomocą sumy kontrolnej CRC"},
+    ]},
+    {command: "date", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "del", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "dir", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "diskpart", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "doskey", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "drivequery", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "echo", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "endlocal", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "erase", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "exit", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "fc", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "find", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "findstr", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "for", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "format", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "fsutil", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "ftype", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "goto", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "gpresult", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "graftabl", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "help", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "icacls", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "if", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "label", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "md", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "mkdir", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "mklink", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "mode", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "more", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "move", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "openfiles", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "path", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "pause", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "popd", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "print", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "prompt", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "pushd", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "rd", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "recover", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "rem", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "ren", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "rename", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "replace", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "rmdir", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "robocopy", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "set", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "setlocal", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "sc", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "schtasks", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "shift", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "shutdown", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "sort", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "start", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "subst", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "systeminfo", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "tasklist", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "taskkill", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "time", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "title", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "tree", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "type", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "ver", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "verify", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "vol", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "xcopy", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
+    {command: "wmic", description: "", category: "", example: "", option: [
+        {argument: "", description: ""},
+    ]},
 ]
-
 
 function command_to_index(command, OS){
     if(OS == "Linux"){
@@ -586,39 +895,49 @@ function index_to_category(index, OS){
 
 function index_to_arguments(index, OS){
     let text = "";
-    let has_option = table_linux[index].hasOwnProperty('option')
-    if(has_option){
-        if(OS == "Linux"){
+    if(OS == "Linux"){
+        let has_option = table_linux[index].hasOwnProperty('option')
+        if(has_option){
             for (let i = 0; i < table_linux[index].option.length; i++) {
                 text += table_linux[index].option[i].argument + "|"
             }
-        } else {
+            let text1 = text.slice(0, -1)
+            return text1;
+        }
+    } else {
+        let has_option = table_windows[index].hasOwnProperty('option')
+        if(has_option){
             for (let i = 0; i < table_windows[index].option.length; i++) {
                 text += table_windows[index].option[i].argument + "|"
             }
+            let text1 = text.slice(0, -1)
+            return text1;
         }
-        let text1 = text.slice(0, -1)
-        return text1;
     }
-} 
+}
 
 function index_to_arguments_description(index, OS){
     let text = "";
-    let has_option = table_linux[index].hasOwnProperty('option')
-    if(has_option){
-        if(OS == "Linux"){
+    if(OS == "Linux"){
+        let has_option = table_linux[index].hasOwnProperty('option')
+        if(has_option){
             for (let i = 0; i < table_linux[index].option.length; i++) {
                 text += table_linux[index].option[i].description + "|"
             }
-        } else {
+            let text1 = text.slice(0, -1)
+            return text1;
+        }
+    } else {
+        let has_option = table_windows[index].hasOwnProperty('option')
+        if(has_option){
             for (let i = 0; i < table_windows[index].option.length; i++) {
                 text += table_windows[index].option[i].description + "|"
             }
+            let text1 = text.slice(0, -1)
+            return text1;
         }
-        let text1 = text.slice(0, -1)
-        return text1;
     }
-} 
+}
 
 function index_to_example(index, OS){
     if(OS == "Linux"){
