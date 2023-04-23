@@ -8,7 +8,7 @@ const table_linux = [
         {argument: "-e", description: "Zwraca komunikat błędu, jeśli katalog docelowy nie istnieje."},
         {argument: "-@", description: "Zwraca komunikat błędu, jeśli katalog docelowy jest niedostępny"},
     ]},
-    {command: "man", description: "Służy do wyświetlania stron podręcznika dla innych poleceń w systemie Unix", category: "system", example: "man [command]", option: [
+    {command: "man", description: "Służy do wyświetlania stron podręcznika dla innych poleceń", category: "system", example: "man command", option: [
         {argument: "-k", description: "Wyszukuje w opisach wszystkich poleceń wyrażenia pasujące do podanego argumentu"},
         {argument: "-f", description: "Wyświetla krótki opis polecenia"},
         {argument: "-l", description: "Służy do wyświetlania stron podręcznika z pliku zamiast z systemowego katalogu"},
@@ -36,15 +36,15 @@ const table_linux = [
         {argument: "-f", description: "Zastępuje istniejący plik bez potwierdzenia"},
     ]},
     {command: "cat", description: "Służy do wyświetlania i łączenia zawartości plików tekstowych w konsoli", category: "file", example: "cat example.txt", option: [
-        {argument: "-n", description: "Dodaje numerację lini w wyjściu"},
-        {argument: "-b", description: "Dodaje numerację lini tylko w niepustych liniach w wejściu"},
+        {argument: "-n", description: "Dodaje numerację linii w wyjściu"},
+        {argument: "-b", description: "Dodaje numerację linii tylko w niepustych liniach w wejściu"},
         {argument: "-s", description: "Usuwa powtarzające się puste linie w wyjściu"},
-        {argument: "-e", description: "Dodaje symbol '$' na końcu każdej lini wyjścia"},
+        {argument: "-e", description: "Dodaje symbol '$' na końcu każdej linii wyjścia"},
         {argument: "-t", description: "Zamienia znaki tabulacji na ciąg znaków '^I' w wyjściu"},
-        {argument: "-v", description: "Wyświetla nieodpowiednie znaki w wyjściu"},
+        {argument: "-v", description: "Wyświetla nie odpowiednie znaki w wyjściu"},
         {argument: "-a", description: "Łączy opcję '-vET' w jedną flagę"},
     ]},
-    {command: "less", description: "Narzędzie wykożystywane do przeglądania plikó tekstowych", category: "tools", example: "less example.txt", option: [
+    {command: "less", description: "Narzędzie wykorzystywane do przeglądania plików tekstowych", category: "tools", example: "less example.txt", option: [
         {argument: "-n", description: "Wyświetla numer linii"},
         {argument: "-i", description: "Ignoruje wielkość liter podczas wyszukiwania"},
         {argument: "-F", description: "Automatycznie zamyka 'less' w przypadku, gdy przeglądany plik mieści się na jednej stronie"},
@@ -58,7 +58,7 @@ const table_linux = [
         {argument: "-e", description: "Zmienia znaki tabulacji na spacje"},
         {argument: "-i", description: "Ignoruje pliki konfiguracyjne nano"},
         {argument: "-o", description: "Dodaje więcej miejsca na ekranie, poprzez ukrycie wiersza stanu w dolnej części ekranu"},
-        {argument: "-r", description: "Uruchamia nano w trybie ograniczeniowym, który nie pozwala na zmianę pliku, jeśli nie masz do niego uprawniń"},
+        {argument: "-r", description: "Uruchamia nano w trybie ograniczeniowym, który nie pozwala na zmianę pliku, jeśli nie masz do niego uprawnień"},
         {argument: "-s", description: "Włącza łamanie wierszy"},
         {argument: "-t", description: "Ustawia rozmiar znaku tabulacji"},
         {argument: "-v", description: "Wyświetla numer wersji nano"},
@@ -72,13 +72,13 @@ const table_linux = [
         {argument: "-version", description:"Wyświetla informacje o wersji programu"},
         {argument: "-write", description:"Otwiera plik tylko do zapisu"},
         {argument: "-font", description:"Ustawia czcionkę"},
-        {argument: "-wrap", description:"Włącza/Wyłącza automatyczne zwijanie tekstu"},
+        {argument: "-wrap", description:"Włącza/Wyłącza automatyczne zawijanie tekstu"},
     ]},
     {command: "vim", description: "Edytor tekstu dla systemów operacyjnych typu Unix i Linux", category: "text editor", example: "vim example.txt", option: [
         {argument:"-c", description: "Pozwala na wykonywanie komendy po otwarciu pliku"},
-        {argument:"-n", description: "Włącza tryb beznumerowy, nie będzie wyświetlane numerowanie linii"},
+        {argument:"-n", description: "Włącza tryb bez numerowy, nie będzie wyświetlane numerowanie linii"},
         {argument:"-R", description: "Włącza tryb tylko do odczytu"},
-        {argument:"-s", description: "Pozwalana wykonywanie skryptu, który może zostać użyty do automatyzacji zadań w vim"},
+        {argument:"-s", description: "Pozwala na wykonywanie skryptu, który może zostać użyty do automatyzacji zadań w vim"},
     ]},
     {command: "touch", description: "Umożliwia tworzenie nowych plików lub modyfikowanie daty modyfikacji istniejących plików", category: "", example: "touch new_file.txt", option: [
         {argument: "-a", description: "Ustawia datę ostatniego dostępu do pliku na bieżącą datę"},
@@ -88,7 +88,7 @@ const table_linux = [
         {argument: "-t", description: "Umożliwia ręczne ustawianie daty i czasu ostatniej modyfikacji pliku"},
     ]},
     {command: "mkdir", description: "Służy do tworzenia nowych katalogów", category: "file", example: "mkdir my_folder", option: [
-        {argument: "-m", description: "Określa prawa dostępu dla utworzonego katalogu"},
+        {argument: "-m", description: "Określa prawa dostępu do utworzonego katalogu"},
         {argument: "-p", description: "Tworzy katalog nadrzędnie, jeśli nie istnieją"},
         {argument: "-v", description: "Wyświetla komunikat o każdym utworzonym katalogu"},
     ]},
@@ -104,13 +104,13 @@ const table_linux = [
     {command: "cp", description: "Kopiuje pliki i katalogi", category: "file", example: "cp example1.txt example2.txt", option: [
         {argument: "-r", description: "Kopiuje rekursywnie"},
         {argument: "-i", description: "Interaktywny tryb kopiowania, Program pyta o potwierdzenie"},
-        {argument: "-p", description: "Zachowuje uprawnienia, date modyfikacji i właściciela"},
+        {argument: "-p", description: "Zachowuje uprawnienia, datę modyfikacji i właściciela"},
         {argument: "-v", description: "Wstawia na ekranie informacje o każdym skopiowanym pliku"},
     ]},
     {command: "ln", description: "Służy do tworzenia dowiązań symbolicznych i twardych pomiędzy plikami", category: "system", example: "ln -s example1.txt example2.txt", option: [
         {argument: "-s", description: "Tworzy dowiązania symboliczne"},
         {argument: "-f", description: "Nadpisuje istniejące dowiązania bez pytania o potwierdzenie"},
-        {argument: "-i", description: "Pyta o potwierdzenie przed natpisaniem"},
+        {argument: "-i", description: "Pyta o potwierdzenie przed nadpisaniem"},
         {argument: "-n", description: "Tworzy dowiązania twarde"},
         {argument: "-v", description: "Wyświetla informację o tworzonych dowiązaniach"},
         {argument: "-r", description: "Tworzy dowiązanie dla całego drzewa katalogów"},
@@ -118,10 +118,10 @@ const table_linux = [
     {command: "tree", description: "Służące do wyświetlania struktury drzewa katalogów i plików w hierarchiczny sposób", category: "tools", example: "tree", option: [
         {argument: "-a", description: "Wyświetla wszystkie pliki, w tym ukryte"},
         {argument: "-d", description: "Wyświetla tylko katalogi"},
-        {argument: "-L", description: "Określa maksymalną głębokość, do którego dzewo powinno być wyświetlone"},
-        {argument: "-f", description: "Wyświetla pełną ścieżkę do każdefo pliku i katalogu"},
+        {argument: "-L", description: "Określa maksymalną głębokość, do którego drzewo powinno być wyświetlone"},
+        {argument: "-f", description: "Wyświetla pełną ścieżkę do każdego pliku i katalogu"},
         {argument: "-i", description: "Ignoruje znaki ASCII"},
-        {argument: "-r", description: "Ignorje pliki i katalogi pasujące do wzorca"},
+        {argument: "-r", description: "Ignoruje pliki i katalogi pasujące do wzorca"},
         {argument: "-q", description: "Ukrywa znaki nieodczytywalne"},
     ]},
     {command: "du", description: "Wyświetla informacje o rozmiarze plików", category: "tools", example: "du", option: [
@@ -132,14 +132,14 @@ const table_linux = [
         {argument: "-x", description: "Wyświetla rozmiar plików tylko w ramce bieżącego systemu plików"},
         {argument: "-D", description: "Wyświetla głębokość na której znajdują się pliki i katalogi"},
     ]},
-    {command: "df", description: "Wyświetla informacje o zajętośći dysku", category: "tools", example: "df -h", option: [
+    {command: "df", description: "Wyświetla informacje o zajętości dysku", category: "tools", example: "df -h", option: [
         {argument: "-h", description: "Wyświetla informacje o zajętości dysku w formacie czytelnym dla człowieka, nie w bajtach"},
         {argument: "-T", description: "Wyświetla typ systemu plików"},
         {argument: "-t", description: "Wyświetla tylko informacje na temat podanego typu systemu plików"},
         {argument: "-i", description: "Wyświetla ilość używanych węzłów plików zamiast sumy zajętego miejsca"},
     ]},
-    {command: "ps", description: "Wyświetla informacie o działających procesach na komputerze", category: "process", example: "ps -ef", option: [
-        {argument: "-e", description: "Wyświetla wszystkie procesy, nawet te, które nie należą do bierzącego terminala"},
+    {command: "ps", description: "Wyświetla informacje o działających procesach na komputerze", category: "process", example: "ps -ef", option: [
+        {argument: "-e", description: "Wyświetla wszystkie procesy, nawet te, które nie należą do bieżącego terminala"},
         {argument: "-f", description: "Wyświetla szczegółowe informacje o każdym procesie"},
         {argument: "-u [username]", description: "Wyświetla procesy należące do podanego użytkownika"},
         {argument: "-x", description: "Wyświetla procesy, które  nie mają terminala kontrolnego"},
@@ -152,7 +152,7 @@ const table_linux = [
         {argument: "-e", description: "Wymuszenie zmiany hasła przy następnym logowaniu"},
     ]},
     {command: "logout", description: "Służy do wylogowania aktualnie zalogowanego użytkownika", category: "system", example: "logout"},
-    {command: "exit", description: "Służy fo zakończenia bieżącej sesji terminala lub powłoki", category: "system", example: "exit", option: [
+    {command: "exit", description: "Służy do zakończenia bieżącej sesji terminala lub powłoki", category: "system", example: "exit", option: [
         {argument: "-h", description: "Wyświetla pomoc dotyczącą użycia komendy"},
         {argument: "-n", description: "Powoduje, że exit nie wykona się, gdy zostanie użyta w skrypcie"},
     ]},
@@ -162,14 +162,14 @@ const table_linux = [
         {argument: "x", description: "Wyklucza punkty montowania innych urządzeń"},
     ]},
     {command: "top", description: "Służy do wyświetlania aktualnie działających procesów i ich wykorzystania zasobów", category: "process", example: "top", option: [
-        {argument: "-d", description: "Pozawala ustawić opóźnienie między aktualizacjami wyświetlanego ekranu"},
+        {argument: "-d", description: "Pozwala ustawić opóźnienie między aktualizacjami wyświetlanego ekranu"},
         {argument: "-u", description: "Umożliwia wyświetlanie procesów tylko dla określonych użytkowników"},
         {argument: "-p", description: "Umożliwia wyświetlanie informacji tylko dla wybranych procesów"},
-        {argument: "-c", description: "Pozwala na wyświetlanie pełnych ścieżek plikó dla procesów"},
+        {argument: "-c", description: "Pozwala na wyświetlanie pełnych ścieżek plików dla procesów"},
         {argument: "-h", description: "Umożliwia wyświetlanie pomocy dla komendy"},
     ]},
     {command: "htop", description: "Służy do wyświetlania listy procesów działających na systemie w czasie rzeczywistym. Jest to bardziej rozbudowana i interaktywna alternatywa dla standardowej komendy top", category: "tools", example: "htop", option: [
-        {argument: "-d [secound]", description: "Określa odstęp czasu między odświeżeniami wyświetlaniej listy procesów"},
+        {argument: "-d [second]", description: "Określa odstęp czasu między odświeżeniem wyświetlanej listy procesów"},
         {argument: "-u [user]", description: "Wyświetla procesy tylko dla podanego użytkownika"},
         {argument: "-p [PID]", description: "Wyświetla informacje tylko dla podanego procesu"},
         {argument: "-c", description: "Wyświetla pełną świeżę procesu"},
@@ -185,15 +185,15 @@ const table_linux = [
     ]},
     {command: "whereis", description: "Służy do wykonywania plików binarnych", category: "system", example: "whereis python", option:[
         {argument: "-b", description: "Wyszukuje tylko pliki binarne"},
-        {argument: "-m", description: "Wyszukuje tylko pliki źrółowe"},
-        {argument: "-s", description: "Wyszukuje tyko storny podręcznika"},
+        {argument: "-m", description: "Wyszukuje tylko pliki źródłowe"},
+        {argument: "-s", description: "Wyszukuje tylko storny podręcznika"},
     ]},
     {command: "whoiam", description: "Służy do wyświetlania nazw użytkownika", category: "system", example: "whoiam", option:[
         {argument: "-h", description: "Wyświetla pomoc dotyczącą użycie polecenia"},
         {argument: "-v", description: "Wyświetla informacje o wersji polecenia"},
     ]},
     {command: "whatis", description: "Służy do wyświetlenia krótkiego opisu danego polecenia", category: "system", example: "whatis ls", option:[
-        {argument: "-w", description: "Pozwala okreśić makymalną długość wyjściowego opisu"},
+        {argument: "-w", description: "Pozwala określić maksymalną długość wyjściowego opisu"},
     ]},
     {command: "locate", description: "Służy do szybkiego wyszukiwania plików na podstawie ich nazw lub wzorców nazw", category: "tools", example: "locate example", option:[
         {argument: "-i", description: "Wyszukuje pliki bez względu na wielkość liter"},
@@ -203,24 +203,24 @@ const table_linux = [
         {argument: "-w", description: "Dopasowuje tylko pliki, których ścieżka zaczyna się od wzorca"},
     ]},
     {command: "find", description: "Służy do wyszukiwania plików i katalogów w określonej lokalizacji", category: "file", example: 'find path -name "*.txt"', option:[
-        {argument: "-name", description: "Wyszukuje pliki lub katalogi o nazwie pasującej do argumenu"},
+        {argument: "-name", description: "Wyszukuje pliki lub katalogi o nazwie pasującej do argumentu"},
         {argument: "-type", description: "Wyszukuje pliki lub katalogi o określonym katalogu"},
-        {argument: "-user [username]", description: "Wyszukuje pliki lub katalogi, których właścicielem jest określony urzytkownik"},
+        {argument: "-user [username]", description: "Wyszukuje pliki lub katalogi, których właścicielem jest określony użytkownik"},
     ]},
     {command: "ping", description: "Służy do testowania połączenia sieciowego poprzez wysłanie pakietów ICMP na wskazany adres IP lub nazwę domeny", category: "network tools", example: "ping google.com", option:[
         {argument: "-c", description: "Określa ilość pakietów do wysłania"},
-        {argument: "-s", description: "Określa rozmiar pakietó w bajtach"},
+        {argument: "-s", description: "Określa rozmiar pakietów w bajtach"},
         {argument: "-i", description: "Określa czas między kolejnymi pakietami"},
         {argument: "-t", description: "Umożliwia ustalanie TTL pakietów"},
-        {argument: "-q", description: "Wyłącza wyświetlanie informacji djagnostycznych"},
-        {argument: "-W", description: "Określa maksymalny czas oczekiwania na odpowiedż od hosta docelowego"},
+        {argument: "-q", description: "Wyłącza wyświetlanie informacji diagnostycznych"},
+        {argument: "-W", description: "Określa maksymalny czas oczekiwania na odpowiedź od hosta docelowego"},
         {argument: "-v", description: "Włącza tryb, który wyświetla szczegółowe informacje o pingowanych pakietach"},
-        {argument: "-h", description: "Wyświetla pomoc dotyczącą popcji komendy"},
+        {argument: "-h", description: "Wyświetla pomoc dotyczącą opcji komendy"},
     ]},
     {command: "wget", description: "Umożliwia pobieranie plików z internetu przy użyciu protokołów HTTP, HTTPS i FTP", category: "network tools", example: "wget http://www.example_site.com/file.txt", option:[
-        {argument: "-O", description: "Umożliwia zapisanie pliku pod inną nazwą niż orginalna"},
+        {argument: "-O", description: "Umożliwia zapisanie pliku pod inną nazwą niż oryginalna"},
         {argument: "-P", description: "Umożliwia zapisywanie pliku w określonym katalogu"},
-        {argument: "-r", description: "Umożliwia rrekursywne pobieranie całej witryny internetowej wraz ze strukturą katalogową"},
+        {argument: "-r", description: "Umożliwia rekursywne pobieranie całej witryny internetowej wraz ze strukturą katalogową"},
         {argument: "-c", description: "Umożliwia kontynuowanie pobierania pliku w przypadku przerwania połączenia"},
         {argument: "-q", description: "Wyłącza wyświetlanie informacji o postępie pobierania"},
         {argument: "-U", description: "Umożliwia podanie wartości pola User-Agent"},
@@ -229,7 +229,7 @@ const table_linux = [
         {argument: "-X", description: "Określa metodę HTTP"},
         {argument: "-H", description: "Dodaje nagłówek HTTP do żądania"},
         {argument: "-d", description: "Przesyła dane w żądaniu POST"},
-        {argument: "-o", description: "Zapisuje odpowiedz serwera do pliku"},
+        {argument: "-o", description: "Zapisuje odpowiedź serwera do pliku"},
         {argument: "-L", description: "Przekierowuje żądanie do adresu URL zwróconego w nagłówku HTTP"},
         {argument: "-u", description: "Określa nazwę użytkownika i hasło dla uwierzytelnienia HTTP"},
         {argument: "-v", description: "Wyświetla bardziej szczegółowe informacje dotyczące procesu wysyłania żądania i odbierania odpowiedzi"},
@@ -240,7 +240,7 @@ const table_linux = [
         {argument: "-E", description: "Wyłącza interpretację sekwencji ucieczki"},
     ]},
     {command: "apt", description: "Narzędzie do zarządzania pakietami w systemach operacyjnych", category: "system", example: "apt get update", option:[
-        {argument: "-y", description: "Automatycznie potwierdza wszystkie pytaniam, które mogą pojawić się w trakcie wykonywania komendy"},
+        {argument: "-y", description: "Automatycznie potwierdza wszystkie pytania, które mogą pojawić się w trakcie wykonywania komendy"},
         {argument: "-q", description: "Tryb cichy, Wyświetla tylko niezbędne informacje"},
         {argument: "-h", description: "Wyświetla krótki opis komendy"},
         {argument: "-V", description: "Wyświetla numer wersji programu apt"},
@@ -261,18 +261,18 @@ const table_linux = [
         {argument: "-V", description: "Wyświetla wersję programu"},
     ]},
     {command: "wall", description: "Służy do wysyłania wiadomości do wszystkich użytkowników zalogowanych na danym serwerze", category: "system", example: "wall example text", option:[
-        {argument: "-n", description: "Powoduje, że znak nowej linii nie jest dodawany na końcu preszełąnej wiadomości"},
+        {argument: "-n", description: "Powoduje, że znak nowej linii nie jest dodawany na końcu przyłączonej wiadomości"},
         {argument: "-t", description: "Dodaje do wiadomości nagłówek zawierający czas wysłania i nazwę użytkownika, który ją wysłał"},
     ]},
     {command: "who", description: "Służy do wyświetlania informacji o aktualnie zalogowanych użytkownikach na systemie", category: "system", example: "who", option:[
-        {argument: "-a", description: "Wywietla informacje o wszystkich uytkownikach, nie tylko zalogowanych"},
+        {argument: "-a", description: "Wyświetla informacje o wszystkich użytkownikach, nie tylko zalogowanych"},
         {argument: "-b", description: "Wyświetla czas ostatniego uruchomienia systemu"},
-        {argument: "-q", description: "Wyświetla liczbę zalogownych użytkowników"},
+        {argument: "-q", description: "Wyświetla liczbę zalogowanych użytkowników"},
         {argument: "-H", description: "Wyświetla informacje w postaci nagłówków kolumn"},
         {argument: "-u", description: "Wyświetla dodatkowe informacje o użytkownikach"},
     ]},
     {command: "bc", description: "kalkulator arytmetyczny. Umożliwia on wykonywanie operacji matematycznych", category: "tools", example: 'echo "2+2"|bc', option:[
-        {argument: "-i", description: "Tryb interakywny, działa jak interaktywny kalkulator"},
+        {argument: "-i", description: "Tryb interaktywny, działa jak interaktywny kalkulator"},
         {argument: "-l", description: "Tryb matematyczny, liczby są traktowane jako wartości dziesiętne zmiennoprzecinkowe zamiast liczb całkowitych"},
         {argument: "-q", description: "Tryb cichy, Tryb nieinteraktywny, który przetwarza dane wejściowe z pliku lub ze strumienia wejściowego i wypisuje wynik na standardowe wyjście"},
         {argument: "-s", description: "Umożliwia wprowadzenie wyrażeń arytmetycznych bezpośrednio z wiersza poleceń lub z pliku"},
@@ -283,14 +283,14 @@ const table_linux = [
     {command: "date", description: "Służy do wyświetlania i ustawiania daty i czasu systemowego", category: "system", example: "date", option:[
         {argument: "-d", description: "Umożliwia ustawianie innej daty niż aktualna"},
         {argument: "-s", description: "Umożliwia ustawianie daty i czasu systemowego"},
-        {argument: "-u", description: "Wyświtla czas UTC zamiast czasu lokalnego"},
+        {argument: "-u", description: "Wyświetla czas UTC zamiast czasu lokalnego"},
         {argument: "-R", description: "Wyświetla datę i czas w formacie RFC"},
         {argument: "-I", description: "Wyświetla datę w formacie ISO"},
     ]},
     {command: "nautilus", description: "Pozwala on na łatwe zarządzanie plikami i katalogami, przeglądanie zawartości systemu plików oraz urządzeń zewnętrznych", category: "file", example: "nautilius", option:[
         {argument: "-h", description: "Wyświetla pomoc dla komendy"},
         {argument: "-n", description: "Otwiera nowe okno menedżera plików"},
-        {argument: "-f", description: "Uruchamia Nautilusa bez pulpiitu"},
+        {argument: "-f", description: "Uruchamia Nautilusa bez pulpitu"},
         {argument: "-s", description: "Zaznacza wybrane pliki lub katalogi"},
         {argument: "-q", description: "Zamyka nautilusa"},
     ]},
@@ -303,16 +303,16 @@ const table_linux = [
         {argument: "-crawl", description: "Pozwala na przeszukiwanie strony internetowej w poszukiwaniu linków do innych stron i zapisywanie ich adresów"},
     ]},
     {command: "write", description: "Służy do wysyłania wiadomości do innych użytkowników zalogowanych na tym samym urządzeniu", category: "system", example: "write user", option:[
-        {argument: "-f [file]", description: "Wysyła reść pliku jako wiadomość"},
+        {argument: "-f [file]", description: "Wysyła treść pliku jako wiadomość"},
         {argument: "-t [time]", description: "Ustawia limit czasu na odpowiedź"},
-        {argument: "-u", description: "Wyłącza automatyczne mapowanie znakó specjalnych"},
-        {argument: "-W", description: "Włącza powaidomienia dżwiękowe o otrzymanych widaomościach"},
+        {argument: "-u", description: "Wyłącza automatyczne mapowanie znaków specjalnych"},
+        {argument: "-W", description: "Włącza powiadomienia dźwiękowe o otrzymanych wiadomościach"},
     ]},
     {command: "ps", description: "Służy do wyświetlania aktualnie działających procesów na komputerze", category: "process", example: "ps -e", option:[
         {argument: "-e", description: "Wyświetla informacje o wszystkich procesach, nie tylko tych, które należą do bieżącego użytkownika"},
         {argument: "-f", description: "Wyświetla pełne informacje o każdym procesie, włącznie z identyfikatorem użytkownika, priorytetem, czasem działania"},
-        {argument: "-u [user]", description: "Wyświetla informacje tylko o procesach należących do podanego użytkownika"},
-        {argument: "-x", description: "Wyświetla informacje o procesach nieinteraktywnych, czyli takich, które nie mają okna graficznego, a działają w tle"},
+        {argument: "-u [user]", description: "Wyświetla informacje tylko o procesach należących do danego użytkownika"},
+        {argument: "-x", description: "Wyświetla informacje o procesach nie interaktywnych, czyli takich, które nie mają okna graficznego, a działają w tle"},
     ]},
     {command: "xargs", description: "Służy do przetwarzania standardowego wejścia i wykonania na jego podstawie innej komendy", category: "shell command", example: 'find . -type f -name "*.txt" -print0 | xargs -0 grep "hello"', option:[
         {argument: "-0", description: "Umożliwia przetwarzanie plików i katalogów zawierających spacje i inne specjalne znaki"},
@@ -322,77 +322,196 @@ const table_linux = [
         {argument: "-r", description: "Uniemożliwia wykonanie komendy wykonanej przez xargs, gdy nie ma żadnych argumentów wejściowych"},
         {argument: "-p", description: "Pyta użytkownika, czy chce wykonać komendę wykonaną przez komendę"},
     ]},
-    {command: "xdg-open", description: "Otwiera plik z domyślną aplikacją", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "xdg-open", description: "Służy do otwierania plików lub adresów URL przy użyciu domyślnych aplikacji dla danego typu pliku lub protokołu", category: "tools", example: "xdg-open example.txt", option:[
+        {argument: "-a [name_application]", description: "Używa danej aplikacji zamiast domyślnej"},
+        {argument: "-g", description: "Otworzy plik w domyślnej aplikacji dla danej kategorii"},
+        {argument: "-h", description: "Wyświetla pomoc dla komendy"},
+        {argument: "-v", description: "Wyświetla wersję komendy"},
     ]},
-    {command: "pushd", description: "Zmienia katalog wyrzucając go na stos", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "pushd", description: "Służy do zmiany bieżącego katalogu roboczego i jednoczesnego umieszczenia obecnego katalogu na stosie", category: "file", example: "pushd /path/to/katalog", option:[
+        {argument: "-n", description: "Dodaje nowy katalog na stos bez zmiany katalogu"},
     ]},
-    {command: "popd", description: "Wykonuje operację pop na stosie katalogów", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "popd", description: "Służy do usuwania zapisanej ścieżki katalogu z listy zapisanych ścieżek", category: "file", example: "popd /path/to/folder"},
+    {command: "crontab", description: "Służy do definiowania harmonogramu wykonywania określonych zadań automatycznych", category: "system", example: "crontab -e", option:[
+        {argument: "-e", description: "Otwiera plik crontab w edytorze tekstowym"},
+        {argument: "-l", description: "Wyświetla aktualny harmonogram zadań dla bieżącego użytkownika"},
+        {argument: "-r", description: "Usuwa cały harmonogram zadań dla bieżącego użytkownika"},
+        {argument: "-u [user]", description: "Umożliwia zarządzanie harmonogramem zadań innego użytkownika"},
     ]},
-    {command: "crontab", description: "Pozwala na edycję polecenia", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "awk", description: "Narzędzie służącym do przetwarzania i wyświetlania tekstu", category: "tools", example: "awk '{print}' example.txt", option:[
+        {argument: "-F", description: "Określa separator pól"},
+        {argument: "-v", description: "Pozwala na przypisywanie wartości zmiennej awk w czasie wykonania"},
+        {argument: "-f", description: "Umożliwia wczytanie skryptu z zewnętrznego pliku"},
+        {argument: "-i", description: "Dokonuje zmian bezpośrednio w pliku wejściowym"},
     ]},
-    {command: "cron", description: "Sposób automatyzacji regularnych, zaplanowanych zadań", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "ssh", description: "Służy do nawiązywania bezpiecznego połączenia sieciowego z innym komputerem za pośrednictwem protokołu SSH", category: "network tools", example: "ssh user@host", option:[
+        {argument: "-4", description: "Umożliwia wymuszenie użycia protokołu IPv4"},
+        {argument: "-6", description: "Umożliwia wymuszenie użycia protokołu IPv6"},
+        {argument: "-A", description: "Włącza autentykację agenta SSH"},
+        {argument: "-C", description: "Włącza kompresję danych na poziomie transmisji"},
+        {argument: "-D", description: "Przekierowuje ruch z lokalnego portu na zdalny port"},
+        {argument: "-F", description: "Określa plik konfiguracyjny SSH"},
+        {argument: "-L", description: "Określa przekierowania portów"},
+        {argument: "-N", description: "Wyłącza zdalny shell"},
+        {argument: "-P", description: "Określa numer portu SSH"},
+        {argument: "-Q", description: "Wyłącza wypisywanie komunikatów diagnostycznych"},
+        {argument: "-T", description: "Tworzy pseudoterminal"},
+        {argument: "-V", description: "Wyświetla szczegółowe informacje o wersji SSH"},
+        {argument: "-X", description: "Włącza pokazywanie X11"},
     ]},
-    {command: "awk", description: "Wyszukuje ciągi i wzorce w plikach", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "scp", description: "Służy do kopiowania plików między komputerami zdalnymi z wykorzystaniem protokołu SSH", category: "network tools", example: "scp example.txt user@host:path", option:[
+        {argument: "-r", description: "Kopiuje katalogi i ich zawartość rekurencyjnie"},
+        {argument: "-P", description: "Ustawia inny numer portu dla połączenia SSH"},
+        {argument: "-q", description: "Tryb cichy, wyłącza wyświetlanie informacji o procesie kopiowania"},
+        {argument: "-C", description: "Włącza kompresję podczas przesyłania plików"},
+        {argument: "-i", description: "Umożliwia określenie niestandardowego pliku klucza prywatnego"},
+        {argument: "-p", description: "Zachowuje daty modyfikacji"},
+        {argument: "-v", description: "Wyświetla szczegółowe informacje o procesie kopiowania"},
     ]},
-    {command: "ssh", description: "Lączebue się za pomocą sieci", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "sed", description: "Służy do przetwarzania tekstu", category: "file", example: "sed 's/kot/pies/g' example.txt", option:[
+        {argument: "-e", description: "Pozwala na wykorzystanie wielu poleceń sed w jednym wywołaniu"},
+        {argument: "-f", description: "Umożliwia wczytanie polecenia z pliku"},
+        {argument: "-i", description: "Pozwala na edycję pliku w miejscu , zamiast wyświetlania wyniku na ekranie"},
+        {argument: "-n", description: "Wyłącza domyślne zachowanie sed, polega na wyświetlaniu każdej linii pliku na ekranie"},
     ]},
-    {command: "scp", description: "Kopiuje plik z systemu lokalnego do systemu zdalnego", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "rsync", description: "Narzędzie służące do synchronizacji plików między dwoma lokalizacjami", category: "file", example: "rsync -avh /path/to/source /path/to/destiantion", option:[
+        {argument: "-a", description: "Zapewnia zachowanie atrybutów plików"},
+        {argument: "-v", description: "Wyświetla szczegółowe informacje dotyczące postępu synchronizacji plików"},
+        {argument: "-h", description: "Wyświetla wynik w formacie czytelnym dla użytkownika"},
+        {argument: "-z", description: "Używa kompresji podczas transferu plików przez sieć"},
+        {argument: "-e", description: "Pozwala na określenie niestandardowego polecenia do wykorzystania jako protokół zdalnego połączenia np. SSH"},
     ]},
-    {command: "sed", description: "Zastępuje ciąg innym ciągiem", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "su", description: "Służy do zmiany aktualnie zalogowanego użytkownika na innego użytkownika lub na konto administratora", category: "system", example: "su", option:[
+        {argument: "-c", description: "Umożliwia wykonywanie jednego polecenia w trybie root"},
+        {argument: "-l", description: "Umożliwia zalogowanie się jako root z resetowaniem środowiska użytkownika"},
+        {argument: "-m", description: "Umożliwia zachowanie bieżącego środowiska użytkownika po zalogowaniu jako użytkownik root"},
+        {argument: "-s", description: "Umożliwia uruchomienie innej powłoki niż domyślna po zalogowaniu jako użytkownik root"},
+        {argument: "-u [user]", description: "Umożliwia wykonanie polecenia jako inny użytkownik niż root"},
     ]},
-    {command: "rsync", description: "Kopiuje pliki, minimalizuje ilość kopiowanych danych szukając zmian", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "chmod", description: "Służy do zmiany uprawnień dostępu do plików i katalogów", category: "right", example: "chmod 777 example.txt", option:[
+        {argument: "-r", description: "Zmiana uprawnień dla plików rekurencyjnie"},
+        {argument: "-v", description: "Wyświetlanie informacji o dodatkowych zmianach"},
+        {argument: "-c", description: "Wyświetla informacje tylko o plikach, których uprawnienia zostaną zmienione"},
+        {argument: "-u", description: "Zmienia uprawnienia dla właściciela"},
+        {argument: "-g", description: "Zmienia uprawnienia dla grupy"},
+        {argument: "-o", description: "Zmienia uprawnienia dla innych użytkowników"},
+        {argument: "+/-", description: "Dodaje lub usuwa określony rodzaj uprawnienia"},
     ]},
-    {command: "su", description: "Tymczasowo zmienia urzytkownika", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "chown", description: "Służy do zmiany właściciela pliku lub katalogu", category: "right", example: "chown user example.txt", option:[
+        {argument: "-R", description: "Zmienia właściciela wszystkich plików i katalogów rekurencyjnie"},
+        {argument: "-v", description: "Wyświetla szczegółowe informacje o każdej zmianie właściciela"},
+        {argument: "-c", description: "Wyświetla informacje tylko o zmianach właściciela, które faktycznie zostały dodane"},
+        {argument: "-h", description: "Zmienia właściciela tylko dla dowiązań symbolicznych"},
     ]},
-    {command: "chmod", description: "Modyfikuje uprawnienia plików", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "chgrp", description: "Służy do zmiany właściciela grupy plików lub katalogów", category: "right", example: "chgrp group example.txt", option:[
+        {argument: "-R", description: "Zmienia właściciela grupy plików rekursywnie"},
+        {argument: "--dereference", description: "Zmienia właściciela grupy pliku symbolicznego na właściciela grupy docelowego pliku"},
     ]},
-    {command: "chown", description: "zmienia właściciea pliku", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "userdel", description: "Służy do usuwania użytkowników z systemu", category: "user administration", example: "userdel user", option: [
+        {argument: "-f", description: "Wymusza usunięcie użytkownika, nawet jeśli użytkownik ma działające procesy"},
+        {argument: "-r", description: "Usuwa również katalog domowy użytkownika i wszystko co się w nim znajduje"}
     ]},
-    {command: "chgrp", description: "Zmienia właściciela pliku grupy", category: "", example: "", option:[
-        {argument: "-p", description: ""},
+    {command: "uniq", description: "Służy do filtrowania powtarzających się linii w plikach tekstowych.", category: "system", example: "uniq example.txt", option: [
+        {argument: "-c", description: "Wyświetla liczbę wystąpień danej linii"},
+        {argument: "-d", description: "Wyświetla tylko linie, które powtarzają się w pliku"},
+        {argument: "-i", description: "Ignoruje wielkość liter podczas porównywania linii"},
+        {argument: "-u", description: "Wyświetla tylko unikalne linie"},
+        {argument: "-w n", description: "Pomija pierwszych n znaków każdej linii przed porównaniem"},
+        {argument: "-s n", description: "Porównuje tylko pierwszych n znaków każdej linii"},
     ]},
-    {command: "userdel", description: "Usuwa użytkownika", category: ""},
-    {command: "uniq", description: "Drukuje unikalne linie", category: ""},
-    {command: "groupdel", description: "Usuwa grupę", category: ""},
-    {command: "groupadd", description: "Dodaje grupę", category: ""},
-    {command: "groups", description: "Pokazuje wszystkie grupy", category: ""},
-    {command: "sort", description: "Sortuje wiersze alfabetycznie/numerycznie", category: ""},
-    {command: "cmp", description: "Raportuje które bajty różnią się między dwoma plikami", category: ""},
-    {command: "diff", description: "Pokazuje wieszer które różnią się między dwoma plikami", category: ""},
-    {command: "adduser", description: "Dodaje użytkownika", category: ""},
-    {command: "users", description: "Pokazuje aktualnie zalogowanych urzytkowników", category: ""},
-    {command: "clear", description: "Czyści ekran (odpowiednik naciśnięcia [Ctrl-L] w powłoce Bash)", category: "terminal", example: "clear", option: [
-        {argument: "-x", description: "Czyści ekran, ale zachowaj bufor przewijania terminala"},
-        {argument: "-T [type_of_terminal]", description: ""},
+    {command: "groupdel", description: "Służy do usuwania grupy użytkowników z systemu", category: "user administration", example: "sudo groupdel group", option: [
+        {argument: "-f", description: "Przymusza usunięcie grupy, nawet jeśli wciąż istnieją użytkownicy należący do niej"},
+        {argument: "-h", description: "Wyświetla krótką pomoc dla polecenia"},
+        {argument: "-R", description: "Określa katalog główny, który zostanie użyty jako punkt początkowy zamiast domyślnego katalogu"},
+        {argument: "-v", description: "Wyświetla szczegółowe informacje na temat usuwanej grupy"},
     ]},
-    {command: "sudo", description: "Uruchamia polecenie jako super urzytkownik (root)", category: "terminal", example: "sudo ls",  option: [
-        {argument:"-u", description: "Uruchamia polecenie jako inny urzytkownik"},
+    {command: "groupadd", description: "Służy do tworzenia nowych grup użytkowników", category: "user administration", example: "sudo groupadd group", option: [
+        {argument: "-g", description: "Określa numer identyfikacyjny GID dla nowej grupy"},
+        {argument: "-K", description: "Pozwala na ustawianie dodatkowych opcji konfiguracyjnych dla grupy"},
+        {argument: "-o", description: "Pozwala na utworzenie grupy o numerze GID, który istnieje w systemie"},
+        {argument: "-r", description: "Tworzy grupę systemową, która jest używana do zarządzania usługami i aplikacjami w systemie"},
+        {argument: "-h", description: "Wyświetla pomoc dla komendy"},
+        {argument: "-v", description: "Wyświetla informacje o wersji komendy"},
     ]},
-    {command: "ls", description: "Listuje katalogi", category: "catalogs", example: "ls", option: [
-        {argument:"-l", description: "Listuje z datami"},
-        {argument:"-la", description: "Coś innego robi"},
+    {command: "groups", description: "Służy do zarządzania grupami użytkowników", category: "user administration", example: "group", option: [
+        {argument: "-g", description: "Wyświetla ID grupy"},
+        {argument: "-n", description: "Wyświetla nazwę grupy"},
+        {argument: "-r", description: "Wyświetla tylko grupy systemowe"},
     ]},
-    {command: "grep", description: "Wyszukuje tekst w plikach", category: "", example: "grep", option: (
+    {command: "sort", description: "Służy do sortowania zawartości plików według określonych kryteriów", category: "system", example: "sort -n -k 2 example.txt", option: [
+        {argument: "-n", description: "Sortowanie, które porządkuje według kolejności alfabetycznej, nie biorąc pod uwagę wartości liczbowych"},
+        {argument: "-k", description: "Określa numer kolumny, według której sortowanie ma zostać wykonane"},
+        {argument: "-r", description: "Zmienia porządek sortowania. Sortuje malejąco a nie rosnąco"},
+        {argument: "-f", description: "Ignoruje wielkość liter"},
+        {argument: "-u", description: "Usuwa powtarzające się linie"},
+        {argument: "-t", description: "Określa separator pól"},
+        {argument: "-c", description: "Sprawdza czy plik jest posortowany. Nie wykonuje sortowania"},
+        {argument: "-o", description: "Określa nazwę pliku wyjściowego"},
+    ]},
+    {command: "cmp", description: "Służy do porównywania dwóch plików bit po bicie", category: "file", example: "cmp example1.txt example2.txt", option: [
+        {argument: "-b", description: "Porównuje pliki w trybie binarnym. Porównuje każdy bajt"},
+        {argument: "-i", description: "Ustawia początkową pozycję porównania"},
+        {argument: "-l", description: "Wyświetla wynik w formacie wpisujący mpozycję pierwszej różnicy i wartości w każdym pliku"},
+        {argument: "-s", description: "Nie wyświetla żadnych informacji na temat różnic między plikami, a jedynie zwraca informację czy są identyczne"},
+    ]},
+    {command: "diff", description: "Służy do porównywania zawartości dwóch plików i wyświetlania różnic między nimi", category: "file", example: "diff example1.txt example2.txt", option: [
+        {argument: "-q", description: "Wyświetla informację czy pliki są identyczne"},
+        {argument: "-r", description: "Porównuje zawartość katalogów i ich podkatalogów rekursywnie"},
+        {argument: "-u", description: "Wyświetla różnicę w formacie jednolitym, ułatwia czytanie wyników porównywania"},
+        {argument: "-i", description: "Ignoruje różnice w wielkości liter"},
+        {argument: "-w", description: "Ignoruje różnice w białych znakach"},
+        {argument: "-B", description: "Ignoruje różnice w pustych liniach"},
+        {argument: "-c", description: "Wyświetla różnicę w formacie kontekstowym, ułatwia czytanie wyników porównywania"},
+    ]},
+    {command: "adduser", description: "Służy do dodawania nowych użytkowników do systemu", category: "user administration", example: "adduser user", option: [
+        {argument: "-c", description: "Umożliwiający dodanie opisu użytkownika"},
+        {argument: "-d", description: "Określa katalog domowy nowego użytkownika"},
+        {argument: "-g", description: "Określa identyfikator grupy, do której należy nowy użytkownik"},
+        {argument: "-s", description: "Określa powłokę, którą będzie używał nowy użytkownik"},
+        {argument: "-m", description: "Umożliwiający automatyczne utworzenie katalogu domowego dla nowego użytkownika"},
+        {argument: "-u", description: "Umożliwiający określenie identyfikatora użytkownika dla nowego użytkownika"},
+    ]},
+    {command: "users", description: "Wyświetla listę zalogowanych użytkowników na danym systemie", category: "user administration", example: "users"},
+    {command: "clear", description: "Służy do wyczyszczenia terminala, czyli usunięcia wcześniejszych poleceń i wyników z jego widoku", category: "system", example: "clear", option: [
+        {argument: "-x", description: "Czyści tylko ekran, pozostawiając historię poleceń w buforze."},
+        {argument: "-T", description: "Określa typ terminala, który ma zostać wyczyszczony"},
+        {argument: "-h", description: "Wyświetla pomoc dla komendy"},
+    ]},
+    {command: "sudo", description: "Służy do wykonania polecenia jako użytkownik z uprawnieniami administratora", category: "system", example: "sudo ls",  option: [
+        {argument:"-u", description: "Uruchamia polecenie jako inny użytkownik"},
+        {argument:"-s", description: "Uruchamia powłokę jako root"},
+        {argument:"-i", description: "Wykonuje polecenie jako użytkownik root, ale z pełnymi zmiennymi środowiskowymi"},
+        {argument:"-l", description: "Wyświetla listę uprawnień użytkownika, w tym listę poleceń, które może wykonywać"},
+    ]},
+    {command: "ls", description: "Służy do wyświetlania zawartości katalogu", category: "system", example: "ls", option: [
+        {argument:"-a", description: "Wyświetla wszystkie pliki, włącznie z ukrytymi"},
+        {argument:"-c", description: "Wyświetla listę plików i katalogów w formie kolumn"},
+        {argument:"-d", description: "Wyświetla tylko nazwę katalogu, a nie jego zawartość"},
+        {argument:"-f", description: "Dodaje symbol końca nazwy dla plików i katalogów"},
+        {argument:"-h", description: "Wyświetla rozmiar plików w czytelnej dla człowieka formie"},
+        {argument:"-i", description: "Wyświetla numer i-węzła każdego pliku"},
+        {argument:"-l", description: "Wyświetla szczegółowe informacje o plikach i katalogach"},
+        {argument:"-m", description: "Wyświetla listę plików i katalogów oddzieloną przecinkami"},
+        {argument:"-n", description: "Wyświetla identyczne informacje jak -l, ale zamiast nazwy właściciela i grupy wyświetla ich numery identyfikacyjne"},
+        {argument:"-p", description: "Dodaje symbol końca nazwy tylko dla katalogów"},
+        {argument:"-q", description: "Wyświetla nazwy plików i katalogów w cudzysłowach, aby uniknąć problemów z nazwami zawierającymi spacje lub znaki specjalne"},
+        {argument:"-r", description: "Odwraca kolejność wyświetlania wyniku"},
+        {argument:"-s", description: "Wyświetla rozmiar każdego pliku w blokach dyskowych"},
+        {argument:"-t", description: "Sortuje wynik wg czasu modyfikacji plików, od najnowszych do najstarszych"},
+        {argument:"-u", description: "Sortuje wynik wg czasu ostatniego dostępu do plików, a nie czasu modyfikacji"},
+        {argument:"-x", description: "Wyświetla listę plików i katalogów w formie wierszy"},
+    ]},
+    {command: "grep", description: "Służy do wyszukiwania wzorców w plikach tekstowych", category: "tools", example: "grep 'Linux' example.txt", option: [
         {argument: "-e", description: "Wyszukuje tekst w plikach (użycie rozszerzonych wyrażeń regularnych)"},
         {argument: "-f", description: "Wyszukuje tekst w plikach (dopasowywanie dowolnego z wielu ciągów jednocześnie)"},
         {argument: "-r", description: "Wyszukuje tekst w plikach (rekursywne wyszukiwanie plików w katalogu)"}
-    )},
-    {command: "cut", description: "Tnie linie na sekcje", category: "", example: "cut", option:[
-        {argument: "-d", description: "Tnie linie na sekcje (Określa ogranicznik)"},
-        {argument: "-f", description: "Tnie linie na sekcje (Określa ideks pola)"},
+    ]},
+    {command: "cut", description: "Służy do wycinania i wyodrębniania określonych części wierszy z plików tekstowych lub strumieni danych", category: "tools", example: "cut -d' ' -f2 example.txt", option:[
+        {argument: "-d", description: "Pozwala na ustawienie separatora pól"},
+        {argument: "-f", description: "Pozwala na wybranie określonych pól (kolumn) do wyodrębnienia"},
+        {argument: "-c", description: "Pozwala na wyodrębnienie określonych znaków z każdego wiersza"},
+        {argument: "-s", description: "Pozwala na wyodrębnienie tylko tych pól, które zawierają separator"},
+        {argument: "-n", description: "Uniemożliwia tworzenie pliku kopii zapasowej"},
     ]}
 ]
 
