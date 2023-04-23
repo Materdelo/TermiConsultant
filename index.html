@@ -4,32 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KommGO</title>
+    <title>TermiConsultant</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script src="database.js"></script>  
-<script src="search.js"></script>
+  <script src="database.js"></script>
+  <script src="search.js"></script>
 
-<center>
+  <h1 id="titlex">>TermiConsultant</h1>
+  <p id="input-text" id="input_txt">><a id="bli">&nbsp;</a></p>
 
-<input type="text" id="input" placeholder="Tearm to search">
-<select id="system">
+  <select id="system">
     <option value="Linux">Linux</option>
     <option value="Windows">Windows</option>
-</select>
-<button onclick="search();">Search</button>
+  </select>
 
-<!-- br -->
-<br>
-<br>
 
-<!-- Generates -->
-<div id="answer">
+  <!-- br -->
+  <br>
+  <br>
 
-</div>
+  <!-- Generates -->
+  <div id="answer"></div>
 
-</center>
-
+  <div style="position: absolute; bottom: 0px;">
+    <p>> David Sonko & Mateusz Olszowy<a id="bli">&nbsp;</a></p>
+  </div>
+  
+  <script src="animations.js"></script>
 
 </body>
 </html>

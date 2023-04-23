@@ -2,7 +2,7 @@
 This project is a command search tool that allows you to search for Linux or Windows commands and see their descriptions, examples, categorys along with the arguments they take.
 <br><br>
 
-# Spis Treści
+# Contents
 - [Funcion](#Function)
 - [Technology used](#Technology-used)
 - [Instalation](#instalaiton)
@@ -20,7 +20,7 @@ This project is a command search tool that allows you to search for Linux or Win
 - CSS - 
 
 ## Instalation
-Clone the repository to your local machine. Open the project directory
+Clone the repository to your local machine. Open the project directory index.html and work it. 
 <br><br>
 
 ## Screen Shot
