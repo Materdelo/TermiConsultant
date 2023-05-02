@@ -110,3 +110,23 @@ function index_to_example(index, OS){
         return table_windows[index].example;
     }
 }
+
+
+function category_lister(){
+    let cat_list = [];
+
+    table_linux.forEach(element => {
+        if(!cat_list.includes(element.category)){
+            cat_list.push(element.category);
+        }  
+    });
+
+    table_windows.forEach(element => {
+        if(!cat_list.includes(element.category)){
+            cat_list.push(element.category);
+        }  
+    });
+
+    return cat_list;
+}
+    

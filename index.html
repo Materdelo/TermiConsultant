@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,27 +12,40 @@
     <script src="./search.js"></script>
 </head>
 <body>
+  <div class="background"></div>
+
   <h1 id="titlex">>TermiConsultant</h1>
   <p id="input-text" id="input_txt">><a id="bli">&nbsp;</a></p>
 
-  <select id="system">
+  <label for="">System Operacyjny:</label>
+  <select id="system" onclick="ope_sys_work_switcher()">
     <option value="Linux">Linux</option>
     <option value="Windows">Windows</option>
   </select>
-
-
+  <label >Kategoria szukania:</label>
+  <select id="search_system" onclick="gen_animation_category_list();">
+    <option value="1">Komenda</option>
+    <option value="2">Kategoria</option>
+    <!--<option value="1">Opis</option>-->
+  </select>
+  <div id="cat-search"></div>
   <!-- br -->
   <br>
   <br>
 
   <!-- Generates -->
-  <div id="answer"></div>
-
-  <div style="position: absolute; bottom: 0px;">
+  <div id="answer" class=""></div>
+  <br><br><br><br>
+  <div id="credits">
     <p>> David Sonko & Mateusz Olszowy<a id="bli">&nbsp;</a></p>
   </div>
   
   <script src="./animations.js"></script>
+
+  <script>
+    console.log(command_to_index('lulzek', 'Linux'));
+    
+  </script>
 
 </body>
 </html>
