@@ -69,6 +69,7 @@ function search(chose = 0,command = '') {
                     });
                    document.getElementById("answer").innerHTML = '';
                 bzzz.forEach(element => {
+                    console.log(">>>"+element+'');
                     chih = animateCode(element, system,chih); 
                 });
                 }
@@ -166,14 +167,29 @@ async function timer() {
   }
 
   function animateCode(input, system,chih) {
-    const code = index_to_comamnd(input,system) + " - " + index_to_description(input, system) + ' (Click)';
+    console.log("Here>"+input+"<End");    console.log("Here" + input !== '');
+
+    let code = '',stop = 0;
+    if(input !== ''){
+        console.log("F you");
+         code = index_to_comamnd(input,system) + " - " + index_to_description(input, system) + ' (Click)';
+    }else{
+         code = "Brak danych w kategori dla tego systemu operacyjnego";
+         input = 1;
+        stop = 1
+    }
+        
     const timers = 20 * code.length;
     timer();
     const speed = 5;
     const gen = document.createElement('div');
     gen.classList.add('viewx');
     gen.setAttribute('id', index_to_comamnd(input, system));
+
+    if(input !== 1){
     gen.setAttribute('onclick', `command_transformer('`+index_to_comamnd(input, system)+`');`);
+    }
+
     gen.innerHTML = '<p id="' + index_to_comamnd(input, system) + '999"></p>';
     document.getElementById("answer").appendChild(gen);
     console.log()

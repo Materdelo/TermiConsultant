@@ -127,20 +127,28 @@ function blocker(block = 5){
   }
 
   return blo;
-}
+} 
 let suport = 'Linux';
 function ope_sys_work_switcher() {
   
   let got = document.getElementById("system").value;
   let input = document.getElementById("input-text").textContent.slice(1);
+  let search_cho = document.getElementById("search_system").value
 
   if(got != suport){
     suport = got;
-    if (input != '') {
-      search();
-    }else{
-      search(0);
+
+    if(search_cho == 1){
+      if (input != '') {
+        search();
+      }else{
+        search(0);
     }
+    }else{
+      search(3)
+    }
+
+    
   }
 
 }
