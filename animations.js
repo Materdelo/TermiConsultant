@@ -67,7 +67,6 @@ return function() {
 }
 
 setTimeout(function() {
-console.log(titlex.innerHTML + '<a id="bli">&nbsp;</a>f');
 titlex.innerHTML = titlex.innerHTML + '<a id="bli">&nbsp;</a>';
 blinkElements = document.querySelectorAll("#bli");
 
@@ -82,9 +81,7 @@ function gen_animation_category_list(UWU = 7){
   if(UWU = 7){
     UWU = sel.value;
   }
-  console.log("Uwu >"+UWU + "sel >" + sel.value)
   if(UWU != chcecker2){
-    console.log("yey")
     chcecker2 = sel.value;
     document.getElementById("answer").innerHTML = '';
   let display_cat = "Kategoria: ";
@@ -144,7 +141,6 @@ function ope_sys_work_switcher() {
     }else{
       search(0);
     }
-    console.log("rest");
   }
 
 }

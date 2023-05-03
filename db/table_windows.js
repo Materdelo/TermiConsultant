@@ -1,4 +1,4 @@
-const table_windows =  [{
+const table_windows = [{
     "command": "assoc",
     "description": "Służy do przypisywania lub wyświetlania skojarzeń rozszerzeń plików z programami, które obsługują te pliki",
     "category": "system",
@@ -197,7 +197,7 @@ const table_windows =  [{
 },
 {
     "command": "chcp",
-    "description": "Ssłuży do zmiany kodowania znaków używanego przez konsolę",
+    "description": "Służy do zmiany kodowania znaków używanego przez konsolę",
     "category": "system",
     "example": "chcp 1252",
     "option": [{
@@ -262,7 +262,7 @@ const table_windows =  [{
         },
         {
             "argument": "/x",
-            "description": "Wyłącza sprawdzanie określonego woluminu podczas następnego uruchomienia systemu"
+            "description": "Wyłącza sprawdzanie określonego wolumenu podczas następnego uruchomienia systemu"
         },
         {
             "argument": "/b",
@@ -450,7 +450,7 @@ const table_windows =  [{
         },
         {
             "argument": "/z",
-            "description": "Kpoiuje pliki w trybie odzyskiwana"
+            "description": "Kopiuje pliki w trybie odzyskiwania"
         },
         {
             "argument": "/a",
@@ -543,11 +543,11 @@ const table_windows =  [{
         {
             "argument": "select disk [number]",
             "description": "Wybiera dysk o numerze podanym jako argument, który jest numerem dysku"
-        }, 
+        },
         {
             "argument": "clean",
             "description": "Czyści dysk, usuwając wszystkie partycje i dane"
-        }, 
+        },
         {
             "argument": "create partition primary",
             "description": "Tworzy nową podstawową partycję na wybranym dysku"
@@ -558,31 +558,31 @@ const table_windows =  [{
     "command": "doskey",
     "description": "Narzędzie, które umożliwia użytkownikowi definiowanie, edytowanie oraz wywoływanie skrótów klawiszowych dla poleceń",
     "category": "system",
-    "example": "doskay ls=dir",
+    "example": "doskey ls=dir",
     "option": [{
             "argument": "/?",
             "description": "Wyświetla pomoc dla komendy doskey"
-        }, 
+        },
         {
             "argument": "/macros",
             "description": "Wyświetla listę zdefiniowanych skrótów klawiszowych"
-        }, 
+        },
         {
             "argument": "/reinstall",
             "description": "Przywraca domyślne skróty klawiszowe"
-        }, 
+        },
         {
             "argument": "/listsize=[number]",
             "description": "Określa maksymalną liczbę zdefiniowanych skrótów klawiszowych, które mogą być wyświetlane na ekranie"
-        }, 
+        },
         {
             "argument": "/history",
             "description": "Wyświetla historię wprowadzonych poleceń"
-        }, 
+        },
         {
             "argument": "/insert",
             "description": "Umożliwia wstawianie znaków w trakcie wprowadzania skrótu klawiszowego"
-        }, 
+        },
         {
             "argument": "/exename=exe",
             "description": "Definiuje skrót klawiszowy, który uruchamia określoną aplikację lub plik wykonywalny"
@@ -597,11 +597,11 @@ const table_windows =  [{
     "option": [{
             "argument": "/V",
             "description": "Wyświetla szczegółowe informacje o urządzeniach przenośnych, takie jak pojemność, liczba partycji, typ systemu plików i inne"
-        }, 
+        },
         {
             "argument": "/S",
             "description": "Wyświetla informacje o dyskach twardych, które są połączone z komputerem przez sieć"
-        }, 
+        },
         {
             "argument": "/F0 [format]",
             "description": "Umożliwia użytkownikowi określenie formatu wyjściowego. Dostępne formaty to: TABLE, LIST, CSV, oraz JSON"
@@ -626,17 +626,18 @@ const table_windows =  [{
     "category": "disk tools",
     "example": "erase [path to file]",
     "option": [{
-        "argument": "filename",
-        "description": "Nazwa pliku lub wzorzec nazw plików, które mają zostać usunięte. W przypadku podania wzorca, zostaną usunięte wszystkie pliki, które spełniają ten wzorzec"
-    }, 
-    {
-        "argument": "/F",
-        "description": "Wymusza usunięcie pliku bez potwierdzenia"
-    },
-    {
-        "argument": "/P",
-        "description": "Wykonuje multipleksowanie zapisu, aby uniemożliwić odzyskanie plików"
-    }]
+            "argument": "filename",
+            "description": "Nazwa pliku lub wzorzec nazw plików, które mają zostać usunięte. W przypadku podania wzorca, zostaną usunięte wszystkie pliki, które spełniają ten wzorzec"
+        },
+        {
+            "argument": "/F",
+            "description": "Wymusza usunięcie pliku bez potwierdzenia"
+        },
+        {
+            "argument": "/P",
+            "description": "Wykonuje multipleksowanie zapisu, aby uniemożliwić odzyskanie plików"
+        }
+    ]
 },
 {
     "command": "exit",
@@ -649,7 +650,7 @@ const table_windows =  [{
     }, {
         "argument": "/C",
         "description": "Ten argument spowoduje wykonanie polecenia i następnie zamknie konsolę"
-    },{
+    }, {
         "argument": "/K",
         "description": "Ten argument spowoduje wykonanie polecenia i nie zamknie konsoli"
     }]
@@ -662,22 +663,22 @@ const table_windows =  [{
     "option": [{
         "argument": "/a",
         "description": "Porównuje pliki w trybie binarnym"
-    },{
+    }, {
         "argument": "/c",
         "description": "Porównuje tylko znaki ASCII"
-    },{
+    }, {
         "argument": "/l",
         "description": "Ignoruje wielkość liter"
-    },{
+    }, {
         "argument": "/lb",
         "description": "Ignoruje końce wierszy"
-    },{
+    }, {
         "argument": "/n",
-        "description": "Wyświetla numer lini, które się różnią"
-    },{
+        "description": "Wyświetla numer linii, które się różnią"
+    }, {
         "argument": "/t",
         "description": "Ignoruje znaki tabulacji"
-    },{
+    }, {
         "argument": "/u",
         "description": "Porównuje pliki jako Unicode"
     }]
@@ -686,16 +687,16 @@ const table_windows =  [{
     "command": "find",
     "description": "Służy do wyszukiwania określonego tekstu w plikach tekstowych",
     "category": "tools",
-    "example": 'find "szukany tekst" example.txt',
+    "example": "find `szukany tekst` example.txt",
     "option": [{
         "argument": "/i",
         "description": "Pozwala na wyszukanie tekstu bez uwzględnienia wielkości liter"
     }, {
         "argument": "/s",
-        "description": "Pozwala na przeszukanie plików we wskazanym katalogu oraz w jego podkatalogach"
-    },{
+        "description": "Pozwala na przeszukiwanie plików we wskazanym katalogu oraz w jego podkatalogach"
+    }, {
         "argument": "/c",
-        "description": "Pozwala na zliczenie liczby wystąpień tekstu w pliku lub plikach"
+        "description": "Pozwala na zliczanie liczby wystąpień tekstu w pliku lub plikach"
     }]
 },
 {
@@ -706,34 +707,34 @@ const table_windows =  [{
     "option": [{
         "argument": "/s",
         "description": "Przeszukuje pliki w bieżącym katalogu i podkatalogach"
-    },{
+    }, {
         "argument": "/i",
         "description": "Ignoruje wielkość liter przy wyszukiwaniu"
-    },{
+    }, {
         "argument": "/v",
         "description": "Wyświetla wyniki, które nie zawierają określonego ciągu znaków"
-    },{
+    }, {
         "argument": "/b",
         "description": "Wyszukuje ciągu znaków na początku każdej linii"
-    },{
+    }, {
         "argument": "/e",
         "description": "Wyszukuje ciągu znaków na końcu każdej linii"
-    },{
+    }, {
         "argument": "/c",
         "description": "Zlicza liczbę wystąpień określonego ciągu znaków"
-    },{
+    }, {
         "argument": "/m",
         "description": "Wyświetla tylko nazwy plików, w których znaleziono szukany ciąg znaków"
-    },{
+    }, {
         "argument": "/n",
         "description": "Wyświetla numer linii, w której znaleziono szukany ciąg znaków"
-    },{
+    }, {
         "argument": "/x",
         "description": "Wyszukuje tylko całych linii, które dokładnie pasują do szukanego ciągu znaków"
-    },{
+    }, {
         "argument": "/L",
         "description": "Wyszukuje ciągu znaków jako całość, a nie jako ciąg znaków, który może pojawić się wewnątrz innych słów"
-    },{
+    }, {
         "argument": "/R",
         "description": "Wyszukuje ciąg znaków przy użyciu wyrażenia regularnego"
     }]
@@ -742,20 +743,20 @@ const table_windows =  [{
     "command": "for",
     "description": "Służy do jest wykonania określonego polecenia dla każdego pliku w zestawie plików",
     "category": "tools",
-    "example": "for %zmienna% in (ścieżka_do_plików) do (polecenie)",
+    "example": "for %zmienna% in (ścieżka_do_pliku) do (polecenie)",
     "option": [{
         "argument": "/r",
         "description": "Przetwarza pliki w podkatalogach wskazanego katalogu"
     }, {
         "argument": "/d",
         "description": "Przetwarza katalogi, a nie pliki"
-    },{
+    }, {
         "argument": "/l",
         "description": "Używa małych liter w nazwach plików"
-    },{
+    }, {
         "argument": "/u",
         "description": "Używa dużych liter w nazwach plików"
-    },{
+    }, {
         "argument": "/x",
         "description": "Wyświetla krótsze nazwy plików zamiast pełnych ścieżek"
     }]
@@ -769,7 +770,7 @@ const table_windows =  [{
         "argument": "/q",
         "description": "Formatowanie szybkie, które pomija pełne skanowanie dysku/partycji w poszukiwaniu uszkodzonych sektorów"
     }, {
-        "argument": "/FS:typ_systemu_plikow",
+        "argument": "/FS:typ systemu plików",
         "description": "Pozwala określić typ systemu plików, który ma być użyty podczas formatowania"
     }]
 },
@@ -784,23 +785,23 @@ const table_windows =  [{
     }, {
         "argument": "file",
         "description": "Zarządzanie plikami"
-    },{
+    }, {
         "argument": "repair",
         "description": "Naprawa uszkodzonego systemu plików"
-    },{
+    }, {
         "argument": "resource",
         "description": "Zarządzanie zasobami systemu plików"
-    },{
+    }, {
         "argument": "volume",
-        "description": "Zarządzanie woluminami dyskowymi"
-    },{
+        "description": "Zarządzanie wolumenami dyskowymi"
+    }, {
         "argument": "dirty",
         "description": "Sprawdzenie, czy system plików jest uszkodzony"
     }]
 },
 {
     "command": "ftype",
-    "description":  "Ssłuży do zarządzania skojarzeniami typów plików z aplikacjami, które mają być używane do otwierania tych plików",
+    "description": "Służy do zarządzania skojarzeniami typów plików z aplikacjami, które mają być używane do otwierania tych plików",
     "category": "system",
     "example": "ftype txtfile",
     "option": [{
@@ -817,7 +818,7 @@ const table_windows =  [{
 {
     "command": "gpresult",
     "description": "Służy do wyświetlania informacji o zasadach grupy",
-    "category": "syetem",
+    "category": "system",
     "example": "gpresult /user username /h report.html",
     "option": [{
         "argument": "/user",
@@ -825,13 +826,13 @@ const table_windows =  [{
     }, {
         "argument": "/computer",
         "description": "Określa nazwę komputera, dla którego mają zostać wyświetlone informacje o zasadach grupy"
-    },{
+    }, {
         "argument": "/scope",
         "description": "Określa zakres, w którym mają zostać wyświetlone informacje o zasadach grupy"
-    },{
+    }, {
         "argument": "/h",
         "description": "Określa, że wyniki mają zostać zapisane do pliku HTML"
-    },{
+    }, {
         "argument": "/x",
         "description": "Określa, że wyniki mają zostać zapisane do pliku XML"
     }]
@@ -848,7 +849,7 @@ const table_windows =  [{
 },
 {
     "command": "help",
-    "description": "Służy do wyświetlenia informacji o dostępnych komendach w wierszu poleceń i ich składni",
+    "description": "Służy do wyświetlania informacji o dostępnych komendach w wierszu poleceń i ich składni",
     "category": "system",
     "example": "help dir"
 },
@@ -860,22 +861,22 @@ const table_windows =  [{
     "option": [{
         "argument": "/grant",
         "description": "Dodaje uprawnienia dostępu dla określonych użytkowników lub grupy"
-    },{
+    }, {
         "argument": "/deny",
         "description": "Odbiera uprawnienia dostępu dla określonych użytkowników lub grupy"
-    },{
+    }, {
         "argument": "/remove",
         "description": "Usuwa uprawnienia dostępu dla określonych użytkowników lub grupy"
-    },{
+    }, {
         "argument": "/reset",
         "description": " Zastępuje wszystkie uprawnienia dostępu dla określonego użytkownika lub grupy domyślnymi ustawieniami"
-    },{
+    }, {
         "argument": "/t",
         "description": "Wykonuje operację na określonym pliku lub katalogu oraz wszystkich plikach i podkatalogach w nim zawartych"
-    },{
+    }, {
         "argument": "/c",
         "description": "Kontynuuje wykonywanie operacji, nawet jeśli wystąpią błędy"
-    },{
+    }, {
         "argument": "/q",
         "description": "Wykonuje operację w trybie cichym, bez wyświetlania powiadomień"
     }]
@@ -894,13 +895,13 @@ const table_windows =  [{
     "command": "label",
     "description": "Służy do zmiany etykiety nazwy woluminu dysku lub partycji",
     "category": "system",
-    "example": "label C: System",
+    "example": "label C: System"
 },
 {
     "command": "md",
     "description": "Służy do tworzenia nowego katalogu",
     "category": "file",
-    "example": "md 'Moje dokumenty' ",
+    "example": "md 'Moje dokumenty' "
 },
 {
     "command": "mkdir",
@@ -909,7 +910,7 @@ const table_windows =  [{
     "example": "mkdir 'Moje dokumenty'",
     "option": [{
         "argument": "/p",
-        "description": "Tworzy wszystkie nieistniejące katalogi w ścieżce"
+        "description": "Tworzy wszystkie istniejące katalogi w ścieżce"
     }]
 },
 {
@@ -928,8 +929,14 @@ const table_windows =  [{
     "category": "system",
     "example": "mode con:colss=80 lines=25",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "cols= [number]",
+        "description": "Określa liczbę kolumn w konsoli"
+    }, {
+        "argument": "lines= [number]",
+        "description": "Określa liczbę wierszy w konsoli"
+    }, {
+        "argument": "rate= [number]",
+        "description": "Określa szybkość transmisji dla portu"
     }]
 },
 {
@@ -940,10 +947,10 @@ const table_windows =  [{
     "option": [{
         "argument": "/c",
         "description": "Wyświetla tylko wybraną liczbę wierszy"
-    },{
+    }, {
         "argument": "/p",
         "description": "Wyświetla plik stronicami"
-    },{
+    }, {
         "argument": "/s",
         "description": "Wyświetla plik bez wyświetlania kursora"
     }]
@@ -965,13 +972,13 @@ const table_windows =  [{
     }, {
         "argument": "/d",
         "description": "Zamyka wybrane pliki otwarte przez użytkowników"
-    },{
+    }, {
         "argument": "/a",
         "description": "Zamyka wszystkie otwarte pliki na komputerze"
-    },{
+    }, {
         "argument": "/s [name]",
         "description": "Wyświetla listę otwartych plików na wybranym komputerze"
-    },{
+    }, {
         "argument": "/u [user]",
         "description": "Wyświetla listę otwartych plików dla wybranego użytkownika"
     }]
@@ -984,10 +991,10 @@ const table_windows =  [{
     "option": [{
         "argument": "/w",
         "description": "Wyświetla bieżącą wartość zmiennej środowiskowej PATH w jednej linii, co ułatwia jej kopiowanie i wklejanie do innych programów"
-    },{
+    }, {
         "argument": "/p",
         "description": "Zmienia wartość zmiennej środowiskowej PATH na podaną wartość"
-    },{
+    }, {
         "argument": "/?",
         "description": "Wyświetla pomoc dotyczącą sposobu użycia komendy"
     }]
@@ -1015,13 +1022,13 @@ const table_windows =  [{
     }, {
         "argument": "/t",
         "description": "Używa pliku tekstowego jako wejścia"
-    },{
+    }, {
         "argument": "/c",
         "description": "Kontynuuje wydruk w przypadku błędów"
-    },{
+    }, {
         "argument": "/u",
-        "description": "Zezwala na drukowanie znaków Unicode"
-    },{
+        "description": "Pozwala na drukowanie znaków Unicode"
+    }, {
         "argument": "/l",
         "description": "Ustawia liczbę linii na stronę"
     }]
@@ -1034,16 +1041,16 @@ const table_windows =  [{
     "option": [{
         "argument": "/k",
         "description": "Pozwala na wprowadzenie i wykonanie jednej komendy, a następnie automatyczne zamknięcie wiersza poleceń"
-    },{
+    }, {
         "argument": "/c",
         "description": "Pozwala na wprowadzenie i wykonanie jednej komendy, a następnie kontynuowanie pracy wiersza poleceń"
-    },{
+    }, {
         "argument": "/d",
         "description": "Pozwala na zmianę katalogu domowego dla wiersza poleceń"
-    },{
+    }, {
         "argument": "/a",
         "description": "Pozwala na zmianę atrybutów pliku lub katalogu"
-    },{
+    }, {
         "argument": "/p",
         "description": "Pozwala na wyświetlenie komunikatu w trakcie oczekiwania na naciśnięcie klawisza przez użytkownika"
     }]
@@ -1056,292 +1063,495 @@ const table_windows =  [{
 },
 {
     "command": "rd",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do usuwania pustych katalogów",
+    "category": "file",
+    "example": "rd c:/my_folder",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/s",
+        "description": "Usuwa katalogi niepuste i ich zawartość rekurencyjnie, czyli wraz z zawartością podrzędną, na wszystkich poziomach"
+    }, {
+        "argument": "/q",
+        "description": "Usuwa katalogi bez potwierdzania przez użytkownika"
+    }, {
+        "argument": "/a",
+        "description": "Umożliwia usunięcie ukrytych katalogów"
     }]
 },
 {
     "command": "recover",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do odzyskiwania usuniętych plików z dysku twardego",
+    "category": "system",
+    "example": "recover file.txt",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/d",
+        "description": "Określa katalog, w którym znajduje się plik do odzyskania"
+    }, {
+        "argument": "/a",
+        "description": "Próbuje odzyskać wszystkie usunięte pliki w katalogu"
+    }, {
+        "argument": "/n",
+        "description": "Określa, ile plików należy odzyskać"
+    }, {
+        "argument": "/c",
+        "description": "Określa, czy odzyskane pliki mają być skompresowane"
+    }, {
+        "argument": "/p",
+        "description": "Określa, czy odzyskane pliki mają być umieszczone w nowym katalogu"
     }]
 },
 {
     "command": "rem",
-    "description": "",
-    "category": "",
-    "example": "",
-    "option": [{
-        "argument": "",
-        "description": ""
-    }]
+    "description": "Służy do dodawania komentarzy w plikach wsadowych",
+    "category": "system",
+    "example": "rem To jest komentarz"
 },
 {
     "command": "ren",
-    "description": "",
-    "category": "",
-    "example": "",
-    "option": [{
-        "argument": "",
-        "description": ""
-    }]
+    "description": "Służy do zmiany nazwy pliku lub katalogu",
+    "category": "file",
+    "example": "ren [path/to/name/file] [name/new_file]"
 },
 {
     "command": "rename",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do zmiany nazwy pliku lub folderu",
+    "category": "system",
+    "example": "rename old_file.txt new_file.txt",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/a",
+        "description": "Zmienia atrybuty pliku i folderu"
+    }, {
+        "argument": "/s",
+        "description": "Zmienia nazwę wszystkich plików i folderów w podanej lokalizacji"
+    }, {
+        "argument": "/y",
+        "description": "Zastępuje istniejące pliki bez pytania użytkownika"
     }]
 },
 {
     "command": "replace",
-    "description": "",
-    "category": "",
-    "example": "",
-    "option": [{
-        "argument": "",
-        "description": ""
-    }]
+    "description": "Służy do zamiany tekstu w pliku",
+    "category": "system",
+    "example": "replace file.txt `abc` `efg`"
 },
 {
     "command": "rmdir",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do usuwania pustych katalogów",
+    "category": "file",
+    "example": "rmdir folder",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/s",
+        "description": "Usuwa określony katalog oraz jego zawartość"
+    }, {
+        "argument": "/q",
+        "description": "Tryb cichy, nie wyświetla komunikatów o potwierdzeniu usuwania"
     }]
 },
 {
     "command": "robocopy",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do kopiowania i synchronizacji plików i folderów",
+    "category": "tools",
+    "example": "robocopy [source] [destination]",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/e",
+        "description": "Kopiuje puste katalogi"
+    }, {
+        "argument": "/z",
+        "description": "Restartowane kopiowanie plików, jeśli kopiowanie zostanie przerwane, zostanie ono automatycznie wznowione"
+    }, {
+        "argument": "/COPPYALL",
+        "description": "Kopiuje wszystkie atrybuty plików, włącznie z atrybutami właściciela i uprawnieniami"
+    }, {
+        "argument": "/r: [number]",
+        "description": "Określa, ile razy robocopy będzie próbować skopiować plik, jeśli wystąpi błąd"
+    }, {
+        "argument": "/w: [number]",
+        "description": "Określa czas oczekiwania między próbami kopiowania pliku, w sekundach"
     }]
 },
 {
     "command": "set",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do ustawiania lub wyświetlania zmiennych środowiskowych",
+    "category": "system",
+    "example": "set",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/p",
+        "description": "Wyświetla tekst na ekranie i czeka na wprowadzenie wartości przez użytkownika"
+    }, {
+        "argument": "/a",
+        "description": "Wylicza wartość wyrażenia matematycznego"
     }]
 },
 {
     "command": "setlocal",
-    "description": "",
-    "category": "",
-    "example": "",
-    "option": [{
-        "argument": "",
-        "description": ""
-    }]
+    "description": "Służy do ustawiania lokalnych zmiennych środowiskowych w bieżącej sesji wiersza poleceń",
+    "category": "system",
+    "example": "setlocal"
 },
 {
     "command": "sc",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do zarządzania usługami systemowymi, takimi jak uruchamianie, zatrzymywanie, konfigurowanie i monitorowanie usług",
+    "category": "system",
+    "example": "sc query",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "query",
+        "description": "Wyświetla listę wszystkich usług systemowych"
+    }, {
+        "argument": "start",
+        "description": "Uruchamia usługę"
+    }, {
+        "argument": "stop",
+        "description": "Zatrzymuje usługę"
+    }, {
+        "argument": "config",
+        "description": "Konfiguruje usługę"
+    }, {
+        "argument": "queryex",
+        "description": "Wyświetla rozszerzone informacje o usłudze"
+    }, {
+        "argument": "description",
+        "description": "Wyświetla opis usługi"
+    }, {
+        "argument": "qc",
+        "description": "Wyświetla konfigurację usługi"
+    }, {
+        "argument": "delete",
+        "description": "Usuwa usługę"
+    }, {
+        "argument": "create",
+        "description": "Tworzy nową usługę"
     }]
 },
 {
     "command": "schtasks",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do zarządzania harmonogramami zadań i umożliwia tworzenie, modyfikowanie, uruchamianie i usuwanie zadań w systemie",
+    "category": "system",
+    "example": "schtasks /create /tn `MyTask` /tr `C:/myfolder/myscript.bat` /sc minute /mo 1",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/create",
+        "description": "Tworzy nowe zadanie"
+    }, {
+        "argument": "/tn",
+        "description": "Określa nazwę zadania"
+    }, {
+        "argument": "/tr",
+        "description": "Określa ścieżkę do pliku lub komendy, która ma być uruchomiona"
+    }, {
+        "argument": "/sc",
+        "description": "Określa częstotliwość uruchamiania zadania"
+    }, {
+        "argument": "/mo",
+        "description": "Określa odstęp czasu między kolejnymi uruchomieniami zadania w zależności od wartości podanej w parametrze /sc"
+    }, {
+        "argument": "/ru",
+        "description": "Określa konto, na którym ma zostać uruchomione zadanie"
+    }, {
+        "argument": "/rp",
+        "description": "Określa hasło dla konta podanego w parametrze /ru"
+    }, {
+        "argument": "/delete",
+        "description": "Usuwa zadanie"
+    }, {
+        "argument": "/query",
+        "description": "Wyświetla listę zadań"
+    }, {
+        "argument": "/run",
+        "description": "Ręcznie uruchamia zadanie"
+    }, {
+        "argument": "/change",
+        "description": "Modyfikuje ustawienia istniejącego zadania"
     }]
 },
 {
     "command": "shift",
-    "description": "",
-    "category": "",
-    "example": "",
-    "option": [{
-        "argument": "",
-        "description": ""
-    }]
+    "description": "Służy do przesuwania pozycji wymienionych parametrów w plikach wsadowych",
+    "category": "system",
+    "example": "shift"
 },
 {
     "command": "shutdown",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do wyłączania lub restartowania komputera",
+    "category": "tools",
+    "example": "shutdown",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/s",
+        "description": "Oznacza wyłączenie systemu"
+    }, {
+        "argument": "/r",
+        "description": "Oznacza ponowne uruchomienie systemu"
+    }, {
+        "argument": "/h",
+        "description": "Oznacza hibernację systemu"
+    }, {
+        "argument": "/t",
+        "description": "Określa czas opóźnienia, zanim zostanie wykonana operacja"
+    }, {
+        "argument": "/f",
+        "description": "Zamyka wszystkie programy bez zapisywania zmian"
     }]
 },
 {
     "command": "sort",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do sortowania tekstu lub plików tekstowych według określonego kryterium sortowania",
+    "category": "system",
+    "example": "sort example.txt",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/r",
+        "description": "Sortowanie w odwrotnej kolejności"
+    }, {
+        "argument": "/+n",
+        "description": "Sortowanie według kolumny n-tej, gdzie n to numer kolumny"
+    }, {
+        "argument": "/m",
+        "description": "Użyj pamięci dyskowej, jeśli dostępna, zamiast pamięci RAM"
     }]
 },
 {
     "command": "start",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do uruchamiania aplikacji, plików lub folderów z wiersza poleceń lub z pliku wsadowego",
+    "category": "file",
+    "example": "start mspaint",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/b",
+        "description": "Uruchamia aplikację w trybie wiersza poleceń"
+    }, {
+        "argument": "/d",
+        "description": "Określa bieżący katalog dla nowego procesu"
+    }, {
+        "argument": "/i",
+        "description": "Uruchamia aplikację w trybie okna bez ramk"
+    }, {
+        "argument": "/Max",
+        "description": " Określa tryb wyświetlania aplikacji jako zmaksymalizowany"
+    }, {
+        "argument": "/min",
+        "description": " Określa tryb wyświetlania aplikacji jako zminimalizowany"
+    }, {
+        "argument": "/wait",
+        "description": "Czeka, aż uruchomiona aplikacja zostanie zamknięta przed kontynuacją wykonywania skryptu lub polecenia"
     }]
 },
 {
     "command": "subst",
-    "description": "",
-    "category": "",
-    "example": "",
-    "option": [{
-        "argument": "",
-        "description": ""
-    }]
+    "description": "Umożliwia utworzenie wirtualnego dysku twardego, który jest mapowany na istniejący katalog lub dysk",
+    "category": "system",
+    "example": "subst X: C:/Windows/System32/Drivers"
 },
 {
     "command": "systeminfo",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do wyświetlania szczegółowych informacji na temat komputera, takich jak informacje o systemie operacyjnym, procesorze, pamięci, sterownikach",
+    "category": "tools",
+    "example": "systeminfo",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/s",
+        "description": "Pozwala na określenie nazwy lub adres IP komputera zdalnego, dla którego chcesz wyświetlić informacje"
+    }, {
+        "argument": "/u",
+        "description": "Umożliwia określenie nazwy użytkownika dla komputera zdalnego"
+    }, {
+        "argument": "/p",
+        "description": "Umożliwia określenie hasła użytkownika dla komputera zdalnego"
+    }, {
+        "argument": "/fo",
+        "description": "Pozwala na wybranie formatu wyjścia. Dostępne formaty to: `TABLE`, `LIST`, `CSV` i `JSON`"
+    }, {
+        "argument": "/nh",
+        "description": "Wyłącza wyświetlanie nagłówka tabeli w formacie wyjścia"
+    }, {
+        "argument": "/?",
+        "description": "Wyświetla pomoc dla polecenia"
     }]
 },
 {
     "command": "tasklist",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do wyświetlania listy aktualnie uruchomionych procesów wraz z informacjami na temat każdego procesu",
+    "category": "system",
+    "example": "tasklist",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/s [computer]",
+        "description": "Określa komputer, na którym należy wykonać operację"
+    }, {
+        "argument": "/u [domein]user",
+        "description": "Określa konto użytkownika do użycia do wykonania tej operacji"
+    }, {
+        "argument": "/p [password]",
+        "description": "Określa hasło dla konta użytkownika wskazanego przez argument /U"
+    }, {
+        "argument": "/m [computer1, computer2]",
+        "description": "Określa komputery zdalne, na których należy wykonać operację"
+    }, {
+        "argument": "/nh",
+        "description": "Wyświetla wynik bez nagłówka"
+    }, {
+        "argument": "/fo [format]",
+        "description": "Określa format wyjścia. Dostępne formaty to: TABLE, LIST, CSV"
+    }, {
+        "argument": "/fi [filters]",
+        "description": "Określa zestaw filtrów wykorzystywanych do selekcji procesów"
     }]
 },
 {
     "command": "taskkill",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do zakończenia procesów",
+    "category": "system",
+    "example": "taskkill /im notepad.exe",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/im [process_name]",
+        "description": "Użycie tej opcji pozwala na podanie nazwy procesu, który ma zostać zakończony"
+    }, {
+        "argument": "/pid [id_process]",
+        "description": "Użycie tej opcji pozwala na podanie identyfikatora procesu, który ma zostać zakończony"
+    }, {
+        "argument": "/f",
+        "description": "Użycie tej opcji wymusza zakończenie procesu bez pytania o potwierdzenie"
+    }, {
+        "argument": "/t",
+        "description": "Użycie tej opcji pozwala na zakończenie procesu oraz wszystkich jego podprocesów"
+    }, {
+        "argument": "/fi [filter]",
+        "description": "Użycie tej opcji pozwala na zastosowanie filtru w celu zakończenia tylko wybranych procesów"
     }]
 },
 {
     "command": "time",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do wyświetlania lub zmiany aktualnego czasu systemowego",
+    "category": "system",
+    "example": "time",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/t",
+        "description": "Wyświetla aktualny czas systemowy w formacie godzina:minuta"
+    }, {
+        "argument": "/s",
+        "description": "Ustawia nowy czas systemowy. Wymaga podania argumentu w formacie godzina:minuta:sekunda.milisekunda"
+    }, {
+        "argument": "/?",
+        "description": "Wyświetla pomoc dla komendy"
     }]
 },
 {
     "command": "title",
-    "description": "",
-    "category": "",
-    "example": "",
-    "option": [{
-        "argument": "",
-        "description": ""
-    }]
+    "description": "Służy do zmiany tytułu okna konsoli",
+    "category": "system",
+    "example": "title new_title"
 },
 {
     "command": "tree",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do wyświetlania drzewa katalogów i plików w systemie plików",
+    "category": "system",
+    "example": "tree",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/a",
+        "description": "Wyświetla atrybuty plików i folderów w formacie rozszerzonym"
+    }, {
+        "argument": "/f",
+        "description": "Wyświetla tylko nazwy plików bez wyświetlania struktury folderów"
+    }, {
+        "argument": "/q",
+        "description": "Wyświetla tylko nazwy plików i folderów z zastosowaniem cudzysłowów"
+    }, {
+        "argument": "/t",
+        "description": "Określa znak używany do wyświetlania struktury drzewa"
     }]
 },
 {
     "command": "type",
-    "description": "",
-    "category": "",
-    "example": "",
-    "option": [{
-        "argument": "",
-        "description": ""
-    }]
+    "description": "Służy do wyświetlania zawartości pliku tekstowego bez otwierania go w edytorze tekstu",
+    "category": "file",
+    "example": "type example.txt"
 },
 {
     "command": "ver",
-    "description": "",
-    "category": "",
-    "example": "",
-    "option": [{
-        "argument": "",
-        "description": ""
-    }]
+    "description": "Służy do wyświetlania numeru wersji systemu",
+    "category": "system",
+    "example": "ver"
 },
 {
     "command": "verify",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do włączania lub wyłączania weryfikacji integralności plików systemowych",
+    "category": "system",
+    "example": "verify on",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "on",
+        "description": "Włącza weryfikację integralności plików systemu"
+    }, {
+        "argument": "off",
+        "description": "Wyłącza weryfikację integralności plików systemu"
     }]
 },
 {
     "command": "vol",
-    "description": "",
-    "category": "",
-    "example": "",
-    "option": [{
-        "argument": "",
-        "description": ""
-    }]
+    "description": "Służy do wyświetlania informacji o woluminach dyskowych na komputerze",
+    "category": "system",
+    "example": "vol"
 },
 {
     "command": "xcopy",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Służy do kopiowania plików i katalogów z jednego miejsca na inne",
+    "category": "system",
+    "example": "xcopy C:/Pulpit/plik.txt D:/Nowy folder",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "/s",
+        "description": "Kopiuje również katalogi puste; zachowuje strukturę katalogów i sub katalogów"
+    }, {
+        "argument": "/e",
+        "description": "Kopiuje również katalogi puste; zachowuje strukturę katalogów i sub katalogów, włączając puste katalogi"
+    }, {
+        "argument": "/i",
+        "description": "Jeśli katalog docelowy nie istnieje, to tworzy go i kopiuje do niego pliki"
+    }, {
+        "argument": "/h",
+        "description": "Kopiuje również pliki ukryte"
+    }, {
+        "argument": "/k",
+        "description": "Kopiuje również atrybuty plików"
+    }, {
+        "argument": "/q",
+        "description": "Tryb cichy (bez wyświetlania informacji o kopiowanych plikach)"
+    }, {
+        "argument": "/y",
+        "description": "Bez pytania o zastąpienie pliku docelowego"
+    }, {
+        "argument": "/d",
+        "description": "Kopiuje tylko te pliki, które są nowsze niż te w miejscu docelowym, lub tylko te pliki, które jeszcze nie zostały skopiowane"
+    }, {
+        "argument": "/t",
+        "description": "Kopiuj tylko strukturę katalogów, bez plików"
+    }, {
+        "argument": "/u",
+        "description": "Kopiuj tylko pliki, które są nowsze lub inne niż w miejscu docelowym"
     }]
 },
 {
     "command": "wmic",
-    "description": "",
-    "category": "",
-    "example": "",
+    "description": "Umożliwia wykonywanie operacji związanych z zarządzaniem systemem operacyjnym Windows za pomocą wiersza poleceń",
+    "category": "system",
+    "example": "wmic cpu get name, status",
     "option": [{
-        "argument": "",
-        "description": ""
+        "argument": "get",
+        "description": "Polecenie służące do wyświetlania informacji o określonych zasobach systemowych"
+    }, {
+        "argument": "set",
+        "description": "Polecenie służące do zmiany ustawień systemowych"
+    }, {
+        "argument": "path",
+        "description": "Argument służący do określenia ścieżki do obiektu w systemie WMM"
+    }, {
+        "argument": "where",
+        "description": "Argument służący do określenia kryteriów filtrowania wyników"
+    }, {
+        "argument": "format",
+        "description": "Argument służący do określenia formatu wyniku"
+    }, {
+        "argument": "/node",
+        "description": "Argument służący do wykonania operacji na zdalnym komputerze"
+    }, {
+        "argument": "/user",
+        "description": "Argument służący do określenia nazwy użytkownika do uwierzytelnienia"
+    }, {
+        "argument": "/password",
+        "description": "Argument służący do określenia hasła użytkownika do uwierzytelnienia"
+    }, {
+        "argument": "/output",
+        "description": "Argument służący do określenia pliku, w którym mają zostać zapisane wyniki operacji"
     }]
 }
 ]

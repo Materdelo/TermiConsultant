@@ -58,7 +58,7 @@ const table_linux = [{
 }, {
 	"command": "head",
 	"description": "Wyświetla pierwsze kilka linii pliku tekstowego",
-	"category": "",
+	"category": "system",
 	"example": "head example.txt",
 	"option": [{
 			"argument": "-n [number]",
@@ -80,7 +80,7 @@ const table_linux = [{
 }, {
 	"command": "tail",
 	"description": "Wyświetlania ostatnich linii pliku lub strumienia danych",
-	"category": "",
+	"category": "system",
 	"example": "tail example.txt",
 	"option": [{
 			"argument": "-n [number]",
@@ -306,7 +306,7 @@ const table_linux = [{
 }, {
 	"command": "touch",
 	"description": "Umożliwia tworzenie nowych plików lub modyfikowanie daty modyfikacji istniejących plików",
-	"category": "",
+	"category": "system",
 	"example": "touch new_file.txt",
 	"option": [{
 			"argument": "-a",

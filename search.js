@@ -43,7 +43,6 @@ function search(chose = 0,command = '') {
                 code += 'Komenda nie znaleziona'
             }
             timers = 20 * code.length;
-            console.log(code.length);
             timer();
             gen.innerHTML = '<div class="viewx" onclick="rest(`' + input + '`);" id="' + input + '"><p id="' + input + '999"></p></div>';
 
@@ -64,14 +63,12 @@ function search(chose = 0,command = '') {
                 let chcocsed = cat_chosed.value;
                 let bzzz = category_to_index(chcocsed,system).split("|");
                 let chih = 0;
-                console.log(bzzz);
                 if(timers === 0){
                     ids.forEach(element => {
                         clearTimeout(element);
                     });
                    document.getElementById("answer").innerHTML = '';
                 bzzz.forEach(element => {
-                    console.log(element +" "+system);
                     chih = animateCode(element, system,chih); 
                 });
                 }
@@ -171,8 +168,6 @@ async function timer() {
   function animateCode(input, system,chih) {
     const code = index_to_comamnd(input,system) + " - " + index_to_description(input, system) + ' (Click)';
     const timers = 20 * code.length;
-    console.log(code.length);
-    //let chih = 0;
     timer();
     const speed = 5;
     const gen = document.createElement('div');
