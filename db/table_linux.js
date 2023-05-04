@@ -254,7 +254,7 @@ const table_linux = [{
 }, {
 	"command": "nedit",
 	"description": "Edytor tekstu dla systemów Unix",
-	"category": "text editor",
+	"category": "text edytor",
 	"example": "nedit example.txt",
 	"option": [{
 			"argument": "-read",
@@ -284,7 +284,7 @@ const table_linux = [{
 }, {
 	"command": "vim",
 	"description": "Edytor tekstu dla systemów operacyjnych typu Unix i Linux",
-	"category": "text editor",
+	"category": "text edytor",
 	"example": "vim example.txt",
 	"option": [{
 			"argument": "-c",
@@ -851,7 +851,7 @@ const table_linux = [{
 }, {
 	"command": "echo",
 	"description": "Służy do wyświetlania tekstu na standardowym wyjściu lub przekierowywaniu tekstu do pliku",
-	"category": "shell command",
+	"category": "system",
 	"example": "echo 'Hello World!'",
 	"option": [{
 			"argument": "-n",
@@ -899,7 +899,7 @@ const table_linux = [{
 }, {
 	"command": "printf",
 	"description": "Służy do wyświetlania tekstu lub wartości zmiennych na standardowym wyjściu lub w pliku",
-	"category": "shell command",
+	"category": "system",
 	"example": "printf 'Hello World!'",
 	"option": [{
 			"argument": "-v",
@@ -1147,7 +1147,7 @@ const table_linux = [{
 }, {
 	"command": "xargs",
 	"description": "Służy do przetwarzania standardowego wejścia i wykonania na jego podstawie innej komendy",
-	"category": "shell command",
+	"category": "system",
 	"example": "find . -type f -name '*.txt' -print0 | xargs -0 grep 'hello'",
 	"option": [{
 			"argument": "-0",
