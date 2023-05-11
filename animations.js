@@ -131,6 +131,8 @@ function blocker(block = 5){
 let suport = 'Linux';
 function ope_sys_work_switcher() {
   
+  
+
   let got = document.getElementById("system").value;
   let input = document.getElementById("input-text").textContent.slice(1);
   let search_cho = document.getElementById("search_system").value
@@ -138,15 +140,24 @@ function ope_sys_work_switcher() {
   if(got != suport){
     suport = got;
 
-    if(search_cho == 1){
+    ids.forEach(element => {
+      clearTimeout(element);
+  });
+
+  
+  if(search_cho == 1){
       if (input != '') {
+        console.log(1);
         search();
       }else{
+        console.log(2);
         search(0);
     }
     }else{
+      console.log(3);
       search(3)
     }
+
 
     
   }

@@ -14,6 +14,8 @@ function search(chose = 0,command = '') {
     gen.innerHTML = '';
     }
 
+    if(chose == 0)
+        timers = 0;
     if (input.length != 0 || chose === 3) {
 
         let s_words = input.split(' ');
